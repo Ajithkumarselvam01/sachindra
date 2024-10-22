@@ -241,6 +241,9 @@ section.banner-section {
   font-size: 20px;
   background: #AB9235;
 }
+.banner-btn a:hover{
+  color:#000;
+}
 i.fa-solid.fa-arrow-right {
   padding-left: 10px;
 }
