@@ -54,10 +54,11 @@ $(document).ready(function () {
       slideTransition: 'linear',
       autoplay: true,
       autoplayTimeout: 800, // Slides change every 3 seconds
+      autoplaySpeed: 10000,      // Extremely smooth 10-second transition
       responsive: {
           0: { items: 2 },
           600: { items: 2 },
-          1000: { items: 5 }
+          1000: { items: 4 }
       }
   });
 });
@@ -115,5 +116,23 @@ $(document).ready(function () {
     updateMobileImage(mobileIndex);
   });
 })();
+
+function decreaseQuantity() {
+  const quantityInput = document.getElementById('quantity');
+  if (quantityInput.value > 1) quantityInput.value--;
+}
+
+function increaseQuantity() {
+  const quantityInput = document.getElementById('quantity');
+  quantityInput.value++;
+}
+
+
+
+
+
+
+
+
 
 
