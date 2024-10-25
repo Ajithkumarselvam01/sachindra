@@ -1,0 +1,542 @@
+    <!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <title>product Listing</title>
+            <!-- Include Animate.css CDN -->
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+            <link rel="stylesheet" href="https://path/to/font-awesome/css/font-awesome.min.css" />
+            <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css" />
+            <link rel="stylesheet" type="text/css" href="./css/owl.carousel.min.css" />
+            <link rel="stylesheet" type="text/css" href="./css/owl.theme.min.css" />
+            <link rel="icon" type="image/x-icon" href="Images/Sachindra-logu.png" />
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="  crossorigin="anonymous" referrerpolicy="no-referrer"/>
+            <!-- Bootstrap CSS v5.2.1 -->
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+            <!-- Owl Carousel CSS -->
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.0/assets/owl.carousel.min.css" />
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.0/assets/owl.theme.default.min.css" />
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+            <link rel="preconnect" href="https://fonts.googleapis.com" />
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+            <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"/>
+            <link rel="preconnect" href="https://fonts.googleapis.com" />
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+            <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" />
+            <link rel="preconnect" href="https://fonts.googleapis.com" />
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+            <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet" />
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+            <!-- custom css  -->
+            <link rel="stylesheet" type="text/css" href="./css/style.css" />
+        </head>
+
+        <body>
+            <header>
+                <!-- NAV_BAR_SECTION START -->
+                <nav>
+                    <input type="checkbox" id="nav-toggle" />
+                    <div class="logo">
+                        <a href="https://www.apollofms.in/">
+                            <img src="Images/Sachindra-logu.png" alt="AFMS-Logo" title="AFMS-Logo" />
+                        </a>
+                    </div>
+                    <ul class="links">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#about">Our Products</a></li>
+                        <li><a href="#work">Custom Rubber Solutions</a></li>
+                        <li><a href="#">Login / Signup</a></li>
+                        <li>
+                            <a href="#"><img class="icon" src="Images/user-logu.png" alt="User Icon" title="User Icon" /></a>
+                        </li>
+                        <li>
+                            <a href="#"><img class="icon" src="Images/Cart-logu.png" alt="Cart Icon" title="Cart Icon" /></a>
+                        </li>
+                        <li>
+                            <a href="#"><img class="icon" src="Images/Search-logu.png" alt="Search Icon" title="Search Icon" /></a>
+                        </li>
+                    </ul>
+                    <label for="nav-toggle" class="icon-burger">
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                    </label>
+                </nav>
+                <!-- NAV_BAR_SECTION END -->
+            </header>
+            <!-- Banner section -->
+            <section class="banner-section product-banner" style="background-image: url('Images/product-listing-banner.png'); background-position: center; background-size: cover; display: flex; align-items: center;">
+                <div class="container banner-container">
+                    <div class="banner-div product-banner-div">
+                        <h1>Products</h1>
+                        <p>Weight plate is a solid rubber weight disc which can be safely used for performing Olympic lifts and can be dropped from a height during exercises.</p>
+                    </div>
+                </div>
+            </section>
+            <!-- Product-collection start -->
+            <section class="Product-collection" style="background-image: url(Images/Product-bacvkground-img.png);">
+                <div class="container">
+                    <!-- Desktop view -->
+                    <div class="product-main-div">
+                        <div class="filter-div">
+                            <h2>Filter</h2>
+
+                            <div class="cate">
+                                <h3>Categories</h3>
+                                <ul>
+                                    <!-- Filter Dropdowns -->
+                                    <li style="list-style: none;">
+                                        <select id="filter1" name="filter" onchange="applyFilter(this.value, 'filter1')">
+                                            <option value="">Lorem ipsum (3)</option>
+                                            <option value="all">All</option>
+                                            <option value="category1">Category 1</option>
+                                            <option value="category2">Category 2</option>
+                                            <option value="category3">Category 3</option>
+                                        </select>
+                                    </li>
+                                    <li style="list-style: none;">
+                                        <select id="filter2" name="filter" onchange="applyFilter(this.value, 'filter2')">
+                                            <option value="">Lorem ipsum (3)</option>
+                                            <option value="all">All</option>
+                                            <option value="category1">Category 1</option>
+                                            <option value="category2">Category 2</option>
+                                            <option value="category3">Category 3</option>
+                                        </select>
+                                    </li>
+                                    <li style="list-style: none;">
+                                        <select id="filter3" name="filter" onchange="applyFilter(this.value, 'filter3')">
+                                            <option value="">Lorem ipsum (3)</option>
+                                            <option value="all">All</option>
+                                            <option value="category1">Category 1</option>
+                                            <option value="category2">Category 2</option>
+                                            <option value="category3">Category 3</option>
+                                        </select>
+                                    </li>
+                                    <li style="list-style: none;">
+                                        <select id="filter4" name="filter" onchange="applyFilter(this.value, 'filter4')">
+                                            <option value="">Lorem ipsum (3)</option>
+                                            <option value="all">All</option>
+                                            <option value="category1">Category 1</option>
+                                            <option value="category2">Category 2</option>
+                                            <option value="category3">Category 3</option>
+                                        </select>
+                                    </li>
+                                    <li style="list-style: none;">
+                                        <select id="filter5" name="filter" onchange="applyFilter(this.value, 'filter5')">
+                                            <option value="">Lorem ipsum (3)</option>
+                                            <option value="all">All</option>
+                                            <option value="category1">Category 1</option>
+                                            <option value="category2">Category 2</option>
+                                            <option value="category3">Category 3</option>
+                                        </select>
+                                    </li>
+                                    <li style="list-style: none;">
+                                        <select id="filter6" name="filter" onchange="applyFilter(this.value, 'filter6')">
+                                            <option value="">Lorem ipsum (3)</option>
+                                            <option value="all">All</option>
+                                            <option value="category1">Category 1</option>
+                                            <option value="category2">Category 2</option>
+                                            <option value="category3">Category 3</option>
+                                        </select>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="most-viewed">
+                                <h2>Most Viewed</h2>
+                                <ul>
+                                    <li class="item">
+                                        <img src="Images/most-viwed-1.png" alt="Diaphragm" />
+                                        <div class="info">
+                                            <h3>Diaphragm</h3>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                        </div>
+                                    </li>
+                                    <li class="item">
+                                        <img src="Images/most-viwed-2.png" alt="Seal" />
+                                        <div class="info">
+                                            <h3>Seal</h3>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                        </div>
+                                    </li>
+                                    <li class="item">
+                                        <img src="Images/most-viwed-3.png" alt="Silicon Diaphragm" />
+                                        <div class="info">
+                                            <h3>Silicon Diaphragm</h3>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                        </div>
+                                    </li>
+                                    <li class="item">
+                                        <img src="Images/most-viwed-4.png" alt="Hat Diaphragm" />
+                                        <div class="info">
+                                            <h3>Hat Diaphragm</h3>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                        </div>
+                                    </li>
+                                    <li class="item">
+                                        <img src="Images/most-viwed-5.png" alt="Weight Plate" />
+                                        <div class="info">
+                                            <h3>Weight Plate</h3>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="product-div">
+                            <h2>Industrial Rubber Products</h2>
+                            <!-- Search Bar with Icon -->
+                            <div class="search-bar">
+                                <input type="text" class="searchTerm" placeholder="Search An Item?" />
+                                <button type="submit" class="searchButton">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </div>
+                            <h4>Showing 1–12 of 24 item(s)</h4>
+                            <p style="color: #949494;">Sachindra Rubber Products</p>
+                            <div class="product-main-div-pro">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-md-4 card-main">
+                                            <div class="product-card">
+                                                <a href="">
+                                                    <div class="discount-badge">-30%</div>
+                                                    <img src="Images/Our-collection-of-product-1.png" alt="Diaphragm" class="product-image" />
+
+                                                    <div class="product-details">
+                                                        <h5 class="product-name">Diaphragm</h5>
+                                                        <div class="product-prices">
+                                                            <a href="">Enquire now</a>
+                                                        </div>
+
+                                                        <!-- <button class=" discount-badge-add enquire-button">
+                                                    <a href=""><span class="material-icons-outlined" style="color: #fff;">+</span></a>
+                                                </button> -->
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-md-4 card-main">
+                                            <div class="product-card">
+                                                <a href="">
+                                                    <div class="discount-badge">-30%</div>
+                                                    <img src="Images/Our-collection-of-product-2.png" alt="SILICON DIAPHRAGM" class="product-image" />
+
+                                                    <div class="product-details">
+                                                        <h5 class="product-name">SILICON DIAPHRAGM</h5>
+                                                        <div class="product-prices">
+                                                            <a href="">Enquire now</a>
+                                                        </div>
+
+                                                        <!-- <button class=" discount-badge-add enquire-button">
+                                                    <a href=""><span class="material-icons-outlined" style="color: #fff;">+</span></a>
+                                                </button> -->
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-md-4 card-main">
+                                            <div class="product-card">
+                                                <a href="">
+                                                    <div class="discount-badge">-30%</div>
+                                                    <img src="Images/Our-collection-of-product-3.png" alt="HAT DIAPHRAGM" class="product-image" />
+
+                                                    <div class="product-details">
+                                                        <h5 class="product-name">HAT DIAPHRAGM</h5>
+                                                        <div class="product-prices">
+                                                            <a href="">Enquire now</a>
+                                                        </div>
+
+                                                        <!-- <button class=" discount-badge-add enquire-button">
+                                                    <a href=""><span class="material-icons-outlined" style="color: #fff;">+</span></a>
+                                                </button> -->
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-main-div-pro">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-md-4 card-main">
+                                            <div class="product-card">
+                                                <a href="">
+                                                    <div class="discount-badge">-30%</div>
+                                                    <img src="Images/Our-collection-4.png" alt="WEIGHT PLATE" class="product-image" />
+
+                                                    <div class="product-details">
+                                                        <h5 class="product-name">RUBBER PAD</h5>
+                                                        <div class="product-prices">
+                                                            <a href="">Enquire now</a>
+                                                        </div>
+                                                        <!-- <button class=" discount-badge-add enquire-button">
+                                                    <a href=""><span class="material-icons-outlined" style="color: #fff;">+</span></a>
+                                                </button> -->
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-md-4 card-main">
+                                            <div class="product-card">
+                                                <a href="">
+                                                    <div class="discount-badge">-30%</div>
+                                                    <img src="Images/Our-collection-5.png" alt="RUBBER TO METAL PRODUCTS" class="product-image" />
+
+                                                    <div class="product-details">
+                                                        <h5 class="product-name">RUBBER TO METAL PRODUCTS</h5>
+                                                        <div class="product-prices">
+                                                            <a href="">Enquire now</a>
+                                                        </div>
+
+                                                        <!-- <button class=" discount-badge-add enquire-button">
+                                                    <a href=""><span class="material-icons-outlined" style="color: #fff;">+</span></a>
+                                                </button> -->
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-md-4 card-main">
+                                            <div class="product-card">
+                                                <a href="">
+                                                    <div class="discount-badge">-30%</div>
+                                                    <img src="Images/Our-collection-6.png" alt="Diaphragm" class="product-image" />
+
+                                                    <div class="product-details">
+                                                        <h5 class="product-name">BELLOW</h5>
+                                                        <div class="product-prices">
+                                                            <a href="">Enquire now</a>
+                                                        </div>
+
+                                                        <!-- <button class=" discount-badge-add enquire-button">
+                                                    <a href=""><span class="material-icons-outlined" style="color: #fff;">+</span></a>
+                                                </button> -->
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-main-div-pro">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-md-4 card-main">
+                                            <div class="product-card">
+                                                <a href="">
+                                                    <div class="discount-badge">-30%</div>
+                                                    <img src="Images/Our-collection-7.png" alt="Diaphragm" class="product-image" />
+
+                                                    <div class="product-details">
+                                                        <h5 class="product-name">Seal</h5>
+                                                        <div class="product-prices">
+                                                            <a href="">Enquire now</a>
+                                                        </div>
+
+                                                        <!-- <button class=" discount-badge-add enquire-button">
+                                                    <a href=""><span class="material-icons-outlined" style="color: #fff;">+</span></a>
+                                                </button> -->
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-md-4 card-main">
+                                            <div class="product-card">
+                                                <a href="">
+                                                    <div class="discount-badge">-30%</div>
+                                                    <img src="Images/Our-collection-8.png" alt="Diaphragm" class="product-image" />
+
+                                                    <div class="product-details">
+                                                        <h5 class="product-name">BEADING</h5>
+                                                        <div class="product-prices">
+                                                            <a href="">Enquire now</a>
+                                                        </div>
+
+                                                        <!-- <button class=" discount-badge-add enquire-button">
+                                                    <a href=""><span class="material-icons-outlined" style="color: #fff;">+</span></a>
+                                                </button> -->
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-md-4 card-main">
+                                            <div class="product-card">
+                                                <a href="">
+                                                    <div class="discount-badge">-30%</div>
+                                                    <img src="Images/Our-collection-9.png" alt="Diaphragm" class="product-image" />
+
+                                                    <div class="product-details">
+                                                        <h5 class="product-name">O RINGS</h5>
+                                                        <div class="product-prices">
+                                                            <a href="">Enquire now</a>
+                                                        </div>
+
+                                                        <!-- <button class=" discount-badge-add enquire-button">
+                                                    <a href=""><span class="material-icons-outlined" style="color: #fff;">+</span></a>
+                                                </button> -->
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="showing">
+                                <p>Showing 1–12 of 24 item(s)</p>
+                                <a href="">Load More<i class="fa-solid fa-chevron-right fa-fw"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Subscribe section end -->
+            </section>
+            <!-- Product-collection end -->
+
+            <!-- footer section -->
+            <footer class="footer-section product-footer">
+                <div class="footer-container">
+                    <div class="footer-content">
+                        <div class="footer-row">
+                            <div class="footer-column footer-1">
+                                <div class="footer-widget">
+                                    <div class="footer-logo">
+                                        <a href="index.html">
+                                            <img src="Images/Sachindra-logu.png" class="img-footer" alt="Sachindra" title="Sachindra" />
+                                        </a>
+                                    </div>
+                                    <div class="footer-text">
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent imperdiet, risus nec ornare ornare, massa velit aliquet velit, non cursus risus nisi non felis. Cras efficitur cursus urna eu
+                                            lobortis. Vestibulum ultricies velit ut dui faucibus tempus. Suspendisse vel nisl justo. Duis ac auctor nunc.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="footer-column footer-2">
+                                <div class="footer-widget">
+                                    <h3 class="footer-heading">Quick Links</h3>
+                                    <ul class="quick-links">
+                                        <li><a href="#">Home</a></li>
+                                        <li><a href="#">About</a></li>
+                                        <li><a href="#">Products</a></li>
+                                        <li><a href="#">Achievements & Certifications</a></li>
+                                        <li><a href="#">Testimonials</a></li>
+                                        <li><a href="#">Contact</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="footer-column footer-3">
+                                <div class="footer-widget">
+                                    <h3 class="footer-heading">Contact Us</h3>
+                                    <div class="footer-location">
+                                        <img src="Images/footer-icon-1.png" alt="" />
+                                        <p>
+                                            +91-9447 76 0215 | +91-8606 05 2220 <br />
+                                            +91-8606 05 2221 | +91-480 286 0215
+                                        </p>
+                                    </div>
+                                    <div class="footer-phone">
+                                        <img src="Images/footer-icon-2.png" alt="" />
+                                        <p>
+                                            contact@rubberplus.in / <br />
+                                            adarshpj@rubberplus.in
+                                        </p>
+                                    </div>
+                                    <div class="footer-email">
+                                        <img src="Images/footer-icon-3.png" alt="" />
+                                        <p>Sachindra Rubber Plus LLP Vallivattom, Thrissur Kerala - 680 123</p>
+                                    </div>
+                                    <div class="social-icons">
+                                        <a href="https://instagram.com" target="_blank">
+                                            <img src="Images/instagram-icon.png" alt="Instagram" title="Instagram" />
+                                        </a>
+                                        <a href="https://twitter.com" target="_blank">
+                                            <img src="Images/X-icon.png" alt="X" title="X" />
+                                        </a>
+
+                                        <a href="https://facebook.com" target="_blank">
+                                            <img src="Images/Facebook-icon.png" alt="Facebook" title="Facebook" />
+                                        </a>
+                                        <a href="https://linkedin.com" target="_blank">
+                                            <img src="Images/Linkedin-icon.png" alt="Linkedin" title="Linkedin" />
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="footer-column footer-4">
+                                <div class="footer-widget">
+                                    <div class="form-container">
+                                        <h2>Request a Quote Today!</h2>
+                                        <form action="#" method="POST" id="contactForm">
+                                            <div class="form-group">
+                                                <input type="text" id="name" name="name" required placeholder="Name" />
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="tel" id="phone" name="phone" required placeholder="Phone number" pattern="[0-9]{10}" title="Please enter a 10-digit phone number" />
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="email" id="email" name="email" required placeholder="Email" />
+                                            </div>
+                                            <div class="form-group">
+                                                <select id="product" name="product" required>
+                                                    <option value="">Products & Solutions</option>
+                                                    <option value="product1">Product 1</option>
+                                                    <option value="product2">Product 2</option>
+                                                    <option value="solution1">Solution 1</option>
+                                                    <option value="solution2">Solution 2</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <textarea id="message" name="message" rows="1" required placeholder="Message"></textarea>
+                                            </div>
+                                            <button type="submit" class="submit-button">Submit</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <div class="copyright-section">
+                <p>Copyright @ 2024. Sachindra Rubber Plus LLP</p>
+            </div>
+
+            <script type="text/javascript" src="js/jquery.min.js"></script>
+            <script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
+            <script type="text/javascript" src="js/owl.carousel.min.js"></script>
+            <script type="text/javascript" src="js/script.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.2/js/bootstrap.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.0/owl.carousel.min.js"></script>
+        </body>
+    </html>
