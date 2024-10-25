@@ -92,6 +92,13 @@ z-index: -1;
 	color: #ab9235;
 	border: 1px solid #ab9235;
 }
+section.our-collection {
+    padding: 0px;
+}
+section.subscribe {
+    position: relative;
+    padding: 20px;
+}
 
 .service-btn a {
 	display: inline-block;
