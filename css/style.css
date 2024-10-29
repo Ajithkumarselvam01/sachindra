@@ -388,7 +388,7 @@ section.who-section {
 
 .who-we-2 p {
 	color: #1a202c;
-	font-size: 19px;
+	font-size: 16px;
 	text-align: justify;
 }
 
@@ -603,7 +603,7 @@ section.client-section {
 }
 
 .sub-pop-1 p {
-	font-size: 23px;
+	font-size: 18px;
 }
 
 .main-div-pop {
@@ -1261,6 +1261,8 @@ section.custom-section {
 
 .mt-3.common-btn-shop {
 	text-align: left;
+	padding-top: 30px;
+
 }
 
 .mt-3.common-btn {
@@ -1864,17 +1866,10 @@ section.counter-section-2 {
 	.shop-button .shop-more {
 		padding: 14px 25px;
 	}
-	.who-we-1 img {
-		height: 460px;
-	}
-
 	.sub-div-con-2 iframe {
 		height: 480px;
 	}
-
-	.sub-pop-1 p {
-		font-size: 18px;
-	}
+	
 }
 
 @media screen and (max-width: 1200px) {
@@ -1897,11 +1892,6 @@ section.counter-section-2 {
 		height: 480px;
 		width: 500px;
 	}
-
-	.sub-pop-1 p {
-		font-size: 18px;
-	}
-
 	.counter {
 		text-align: center;
 		padding: 0;
@@ -1914,16 +1904,21 @@ section.counter-section-2 {
 	.shop-button .shop-more {
 		padding: 14px 25px;
 	}
+	.counter-2 p {
+		font-size: 20px;
+	}
 }
 
 @media screen and (max-width: 1100px) {
 	.sub-div-con-2 iframe {
 		height: 532px;
 	}
-
+    .sub-div-con-2 {
+        height: auto;
+    }
 	nav .links a:not(:has(img)) {
 		padding: 0px;
-		font-size: 20px;
+		font-size: 16px;
 	}
 
 	.main-subs {
@@ -2065,11 +2060,18 @@ section.counter-section-2 {
 	.sub-pop-1 {
 		width: 50%;
 	}
+	.sub-div-con-2{
+		overflow: scroll;
+	}
 }
 
 @media screen and (max-width: 990px) {
 	section.Product-collection-mob {
 		display: block;
+	}
+	.footer-section {
+		margin-top: 0px;
+		padding: 50px 1px 65px 0px;
 	}
 	section.Product-collection {
 		display: none;
@@ -2285,6 +2287,7 @@ section.counter-section-2 {
 
 	.mt-3.common-btn-shop {
 		text-align: center;
+		
 	}
 
 	.blog-wrapper {
