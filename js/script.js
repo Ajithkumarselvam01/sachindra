@@ -53,7 +53,6 @@ $(document).ready(function () {
       nav: false,
       slideTransition: 'linear',
       autoplay: true,
-      autoplayTimeout: 800, // Slides change every 3 seconds
       autoplaySpeed: 10000,      // Extremely smooth 10-second transition
       responsive: {
           0: { items: 2 },
