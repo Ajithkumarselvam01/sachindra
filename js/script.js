@@ -130,6 +130,28 @@ function increaseQuantity() {
 
 
 
+document.addEventListener("DOMContentLoaded", () => {
+  const counters = document.querySelectorAll('.number-2');
+
+  const speed = 200; // Adjust to control the animation speed
+
+  counters.forEach(counter => {
+      const updateCount = () => {
+          const target = +counter.getAttribute('data-target'); // Target number
+          const current = +counter.innerText; // Current displayed number
+          const increment = target / speed; // Increment value per step
+
+          if (current < target) {
+              counter.innerText = Math.ceil(current + increment);
+              setTimeout(updateCount, 10); // Update every 10ms
+          } else {
+              counter.innerText = target; // Ensure it stops at the target value
+          }
+      };
+
+      updateCount(); // Start the animation
+  });
+});
 
 
 
