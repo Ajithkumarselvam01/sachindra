@@ -25,7 +25,7 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: "Poppins";
+	font-family: "Roboto";
 	font-weight: 600;
 }
 
@@ -53,12 +53,12 @@ section {
 	position: relative;
 	overflow: hidden;
 	z-index: 1;
-	border: 2px solid #ab9235;
 	font-size: 25px;
-	padding: 5px 25px 7px;
+	padding: 14px 30px 10px;
 	border-radius: 3px;
 	font-family: "Poppins";
-	font-weight: 500;
+	font-weight: 400;
+	font-size:20px;
 }
 
 p.mt-3.common-btn-shop.common-btn {
@@ -75,6 +75,10 @@ p.mt-3.common-btn-shop.common-btn {
 	background-color: #000;
 	z-index: -2;
 }
+.view {
+    width: 50%;
+    text-align: right;
+}
 
 /* .common-btn a:before {
 content: '';
@@ -87,7 +91,10 @@ color: #6A055A;
 transition: all 0.3s;
 z-index: -1;
 } */
-
+.banner-div h1 {
+    font-size: 35px;
+	font-weight: 700;
+}
 .common-btn a:hover {
 	color: #ab9235;
 	border: 1px solid #ab9235;
@@ -247,6 +254,8 @@ section.banner-section {
 	width: 100%;
 	font-family: 'Poppins';
     font-weight: 400;
+	text-align: center;
+    padding: 20px 0;
 }
 .product-div h2 {
     font-family: 'Roboto';
@@ -271,7 +280,7 @@ i.fa-solid.fa-arrow-right {
 
 /* counter */
 /* counter section start */
-.counter-container {
+/* .counter-container {
 	display: flex;
 	justify-content: space-around;
 	width: 100%;
@@ -283,12 +292,12 @@ i.fa-solid.fa-arrow-right {
 }
 
 .counter .number {
-	font-size: 65px;
+	font-size: 55px;
 	color: #fff;
 	font-weight: bold;
 	display: inline-flex;
 	align-items: center;
-	font-family: "Playfair-bold";
+	font-family: "Roboto";
 }
 
 .counter .plus {
@@ -303,8 +312,55 @@ i.fa-solid.fa-arrow-right {
 	color: #fff;
 	/* Purple color */
 	font-weight: 700;
+} */
+
+.counter-section-2 {
+    background-color: #b89a40; /* Gold background */
+    padding: 20px 0;
 }
 
+.counter-container-2 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+.counter-2 {
+    text-align: center;
+    flex: 1;
+    padding: 10px 0;
+    position: relative;
+    min-width: 200px; /* Ensures the counter has some width */
+}
+
+/* Add border-right except for the last element in each row */
+.counter-2:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 10%;
+    bottom: 10%;
+    width: 1px;
+    background-color: white;
+}
+.number-2 {
+    font-size: 55px;
+    font-weight: 600;
+    color: white;
+    font-family: 'Roboto';
+}
+
+.plus {
+    font-size: 55px;
+    color: white;
+}
+
+.counter-2 p {
+    color: white;
+    margin-top: 5px;
+    font-size: 28px;
+}
 section.counter-section {
 	padding: 0 0 30px;
 	background: #ab9235;
@@ -348,14 +404,15 @@ section.who-section {
 /* Styling for the content */
 .gym-content h2 span {
 	color: black;
-	font-weight: 700;
+	font-weight: 600;
 }
 
 .gym-content h2 {
-	font-size: 30px;
-	margin-bottom: 10px;
+    font-size: 35px;
+    margin-bottom: 10px;
+    font-family: 'Roboto';
+    letter-spacing: 1px;
 }
-
 .gym-content p {
 	font-size: 20px;
 	line-height: 1.5;
@@ -388,6 +445,7 @@ section.who-section {
 .sub-gym img {
 	box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 	border-radius: 20px 20px 0px 0px;
+	background:#fff;
 }
 
 .sub-gym h4 {
@@ -647,6 +705,7 @@ section.Testing-lab {
 
 h2.heading-text.text-center {
 	padding: 20px;
+	font-family: 'Poppins';
 }
 
 /* recent blog section */
@@ -668,21 +727,14 @@ a:hover,
 	line-height: 1;
 	float: left;
 }
-
-.recent-a a {
-	float: right;
-}
-
-.recent-h2 {
-	width: 50%;
-	padding: 10px 25px;
-}
-
 .recent-a {
-	width: 50%;
-	transform: translateX(-40px);
+    color: #fff;
+    background: #000;
+    padding: 10px 30px;
+    border-radius: 2px;
+    font-family: 'Roboto';
+    font-weight: 500;
 }
-
 .recent-a a {
 	float: right;
 	background: #000;
@@ -690,7 +742,10 @@ a:hover,
 	padding: 10px 25px;
 	border-radius: 10px;
 }
-
+.recent {
+    width: 50%;
+    text-align: left;
+}
 .section-title.service-title p {
 	padding: 0 190px;
 	margin-bottom: 10px;
@@ -699,19 +754,6 @@ a:hover,
 .blog-area {
 	background: #f8f9fa;
 	min-height: 100vh;
-}
-
-.blog-wrapper {
-	overflow: hidden;
-	padding: 20px;
-}
-
-.home-blog-wrapper {
-	transition: 0.3s;
-}
-
-.blog-wrapper.home-blog-wrapper:hover {
-	box-shadow: 10px 20px 30px rgba(0, 0, 0, 0.12);
 }
 
 .blog-thumb {
@@ -1807,6 +1849,9 @@ button.searchButton {
     padding: 5px;
     border: 1px solid #DFDEDE;
 }
+section.counter-section-2 {
+    background: #AB9235;
+}
 /* Media Queries css start */
 @media screen and (max-width: 1300px) {
 	.sub-div-con-2 {
@@ -2208,6 +2253,22 @@ button.searchButton {
 }
 
 @media screen and (max-width: 768px) {
+	counter-container-2 {
+        flex-direction: row;
+    }
+
+    .counter-2 {
+        flex: 0 0 50%; /* Each counter takes 50% width */
+        box-sizing: border-box;
+        border-right: none;
+        border-bottom: 1px solid white; /* Add border-bottom */
+    }
+	.counter-2:not(:nth-child(2n))::after { /* For two columns layout */
+        display: block;
+    }
+    .counter-2:nth-child(2n)::after {
+        display: none;
+    }
 	section.subscribe {
 		padding: 55px 0px;
 	}
@@ -2460,6 +2521,21 @@ button.searchButton {
 }
 
 @media screen and (max-width: 425px) {
+	.counter-container-2 {
+        flex-direction: column;
+    }
+	.counter-2::after {
+        display: none; /* No border on single column layout */
+    }
+
+    .counter-2 {
+        flex: 0 0 100%; /* Each counter takes full width */
+        border-bottom: 1px solid white;
+    }
+
+    .counter-2:last-child {
+        border-bottom: none; /* Remove border for the last item */
+    }
 
 	section.subscribe {
 		padding: 40px 0px;
