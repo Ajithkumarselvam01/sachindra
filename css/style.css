@@ -388,7 +388,7 @@ section.who-section {
 
 .who-we-2 p {
 	color: #1a202c;
-	font-size: 16px;
+	font-size: 18px;
 	text-align: justify;
 }
 
@@ -1261,7 +1261,7 @@ section.custom-section {
 
 .mt-3.common-btn-shop {
 	text-align: left;
-	padding-top: 30px;
+	padding-top: 10px;
 
 }
 
@@ -1910,6 +1910,11 @@ section.counter-section-2 {
 }
 
 @media screen and (max-width: 1100px) {
+	.who-we-2 p {
+			color: #1a202c;
+			font-size: 17px;
+			text-align: justify;
+	}
 	.sub-div-con-2 iframe {
 		height: 532px;
 	}
