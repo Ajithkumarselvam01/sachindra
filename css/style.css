@@ -1,3 +1,13 @@
+@font-face {
+	src: url("fonts/Poppins-Medium.ttf");
+	font-family: "Poppins-Medium";
+}
+
+@font-face {
+	src: url("fonts/Poppins-Bold.ttf");
+	font-family: "Poppins-Bold";
+}
+
 /* General Styles */
 body {
 	margin: 0;
