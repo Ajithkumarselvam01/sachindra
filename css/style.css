@@ -2612,7 +2612,11 @@ section.slider-section {
 	.counter-2::after {
         display: none; /* No border on single column layout */
     }
-
+	.recent {
+		width: 100%;
+		text-align: center;
+		padding: 10px;
+	}
     .counter-2 {
         flex: 0 0 100%; /* Each counter takes full width */
         border-bottom: 1px solid white;
@@ -2675,6 +2679,10 @@ section.slider-section {
 @media (max-width: 375px) {
 	.sub-div-con-1 p {
 		font-size: 15px;
+	}
+	.view {
+		width: 100%;
+		text-align: center;
 	}
 
 	.Achievement-2-mob {
