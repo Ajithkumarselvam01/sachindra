@@ -154,6 +154,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
+// JavaScript to pause and resume the scroll animation on hover
+const slideTrack = document.querySelector('.slide-track');
 
+// Pause animation on hover
+slideTrack.addEventListener('mouseenter', () => {
+    slideTrack.style.animationPlayState = 'paused';
+});
 
-
+// Resume animation when mouse leaves
+slideTrack.addEventListener('mouseleave', () => {
+    slideTrack.style.animationPlayState = 'running';
+});
