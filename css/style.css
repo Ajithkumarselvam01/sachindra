@@ -2371,10 +2371,6 @@ section.Our-Company {
 		height: 527px;
 		width: 500px;
 	}
-	section.subscribe {
-		display: none;
-	}
-	
 }
 
 @media screen and (max-width: 800px) {
