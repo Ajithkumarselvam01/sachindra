@@ -2001,10 +2001,40 @@ section.Our-features {
 .Our-features-sub-div p {
     font-weight: 400;
 }
+
+.our-strength-sub-div {
+    width: 50%;
+    padding: 10px;
+}
+.Our-stre-1 {
+    width: 50%;
+}
+.Our-stre-1 {
+    width: 50%;
+    height: 300px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 35px;
+}
+.our-strength-main-div-abo {
+    display: flex;
+    gap: 30px;
+    width: 100%;
+    margin-top: 30px;
+}
+.Our-stre-1 p {
+    font-weight: 400;
+    font-size: 16px;
+}
+.Our-stre-2 {
+    padding: 20px;
+}
 /* Media Queries css start */
 @media screen and (max-width: 1300px) {
 	.sub-div-con-2 {
 		height: 480px;
+	}
+	.Our-stre-1 p {
+		font-size: 15px;
 	}
 	.counter-2 p {
 		font-size: 20px;
@@ -2071,12 +2101,18 @@ section.Our-Company {
 	.shop-button .shop-more {
 		padding: 14px 25px;
 	}	
+	.Our-stre-1 {
+		width: 65%;
+	}
 	
 }
 @media screen and (max-width: 1100px) {
 
 	.sub-div-con-2 iframe {
 		height: 532px;
+	}
+	.Our-stre-1 {
+		width: 65%;
 	}
     .sub-div-con-2 {
         height: auto;
@@ -2132,6 +2168,9 @@ section.Our-Company {
 	nav {
 		padding: 10px 0% 20px 2%;
 	}
+	.Our-stre-1 {
+        width: 85%;
+    }
 
 	.custom-main-div {
 		display: none;
@@ -2334,7 +2373,15 @@ section.Our-Company {
 	.prod-det .container {
 		padding: 0px;
 	}
+	.Our-features-mian-div {
+		display: block;
+	}
+	.Our-features-sub-div {
+		width: 100%;
+		margin-bottom: 30px;
+	}
 	
+
 	.prod-img {
         flex-direction: column-reverse; /* Reverse order on mobile */
     }
@@ -2442,6 +2489,16 @@ section.Our-Company {
 @media screen and (max-width: 768px) {
 	counter-container-2 {
         flex-direction: row;
+    }
+	.Our-stre-1 {
+        width: 50%;
+    }
+	.our-strength-main-div-abo {
+		display: block;
+	}
+	.our-strength-sub-div {
+        width: 100%;
+        margin-bottom: 30px;
     }
 	.Our-team-card-main {
 		display: block;
@@ -2576,6 +2633,9 @@ section.Our-Company {
             .slide {
                 width: 150px;
             }
+			.Our-stre-1 {
+				width: 70%;
+			}
 	footer.footer-detali{
 		padding: 30px;
 	}
@@ -2731,12 +2791,16 @@ section.Our-Company {
 	.arrow-div-mob {
 		transform: translateX(30%);
 	}
+	.Our-stre-1 {
+        width: 80%;
+    }
 }
 
 @media screen and (max-width: 425px) {
 	.counter-container-2 {
         flex-direction: column;
     }
+
 	.Our-team-card-sub p {
         text-align: justify;
     }
@@ -2763,8 +2827,9 @@ section.Our-Company {
 	section.subscribe {
 		padding: 40px 0px;
 	}
-	
-
+	.Our-stre-1 {
+        width: 95%;
+    }
 	.form-container {
 		width: 100%;
 		/* Adjust width for small screens */
