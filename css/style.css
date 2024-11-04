@@ -1,3 +1,13 @@
+@font-face {
+	src: url("fonts/Poppins-Medium.ttf");
+	font-family: "Poppins-Medium";
+}
+
+@font-face {
+	src: url("fonts/Poppins-Bold.ttf");
+	font-family: "Poppins-Bold";
+}
+
 /* General Styles */
 body {
 	margin: 0;
@@ -702,8 +712,9 @@ section.Testing-lab {
     font-size: 25px;
 
 }
-
-
+section.About-banner {
+    height: 350px;
+}
 h2.heading-text.text-center {
 	padding: 20px;
 	font-family: 'Poppins';
@@ -2048,6 +2059,7 @@ section.Our-features {
 		color: #1a202c;
 		font-size: 18px;
 		text-align: justify;
+		font-weight:400;
 }
 /* About us */
 section.Our-Company {
