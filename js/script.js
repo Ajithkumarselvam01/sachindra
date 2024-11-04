@@ -55,7 +55,7 @@ $(document).ready(function () {
       autoplay: true,
       autoplaySpeed: 10000,      // Extremely smooth 10-second transition
       responsive: {
-          0: { items: 2 },
+          0: { items: 1 },
           600: { items: 2 },
           1000: { items: 5 }
       }
