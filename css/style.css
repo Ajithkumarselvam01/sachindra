@@ -281,43 +281,6 @@ section.banner-section {
 i.fa-solid.fa-arrow-right {
 	padding-left: 10px;
 }
-
-/* counter */
-/* counter section start */
-/* .counter-container {
-	display: flex;
-	justify-content: space-around;
-	width: 100%;
-	border-radius: 10px;
-}
-
-.counter {
-	text-align: center;
-}
-
-.counter .number {
-	font-size: 55px;
-	color: #fff;
-	font-weight: bold;
-	display: inline-flex;
-	align-items: center;
-	font-family: "Roboto";
-}
-
-.counter .plus {
-	font-size: 60px;
-	color: #fff;
-	margin-left: 4px;
-}
-
-.counter p {
-	margin-top: 10px;
-	font-size: 28px;
-	color: #fff;
-	/* Purple color */
-	font-weight: 700;
-} */
-
 .counter-section-2 {
     background-color: #b89a40; /* Gold background */
     padding: 20px 0;
@@ -335,10 +298,8 @@ i.fa-solid.fa-arrow-right {
     flex: 1;
     padding: 10px 0;
     position: relative;
-    min-width: 200px; /* Ensures the counter has some width */
+    min-width: 200px;
 }
-
-/* Add border-right except for the last element in each row */
 .counter-2:not(:last-child)::after {
     content: "";
     position: absolute;
@@ -404,8 +365,6 @@ section.who-section {
 	border-radius: 10px;
 	margin: 20px 0;
 }
-
-/* Styling for the content */
 .gym-content h2 span {
 	color: black;
 	font-weight: 600;
@@ -424,8 +383,6 @@ section.who-section {
 	font-family: "Roboto";
 	font-weight: 400;
 }
-
-/* Styling for the button */
 .shop-button .shop-more {
 	text-decoration: none;
 	background-color: black;
@@ -474,7 +431,6 @@ section.who-section {
 	width: 1.5px;
 }
 
-/* Remove hover effect from client logos inside the carousel */
 .client-section .client-logo .item {
 	background-color: #fff;
 	margin: 10px;
@@ -534,17 +490,14 @@ section.client-section {
 
 .location p::before {
 	content: "\f3c5";
-	/* Unicode for the location-dot icon */
 	font-family: "Font Awesome 5 Free";
 	font-weight: 900;
 	margin-right: 8px;
-	/* Spacing between the icon and the text */
 }
 
 .loaction {
 	display: flex;
 	gap: 20px;
-	/* align-items: center; */
 }
 
 .loaction img {
@@ -556,7 +509,6 @@ section.client-section {
 .Phone {
 	display: flex;
 	gap: 20px;
-	/* align-items: center; */
 }
 
 .Phone img {
@@ -568,7 +520,6 @@ section.client-section {
 .mail {
 	display: flex;
 	gap: 20px;
-	/* align-items: center; */
 }
 
 .mail img {
@@ -577,7 +528,7 @@ section.client-section {
 	object-fit: contain;
 }
 
-/* popular section */
+
 .main-div-pop {
 	display: flex;
 	width: 100%;
@@ -2035,6 +1986,71 @@ section.Our-features {
 .Our-stre-2 {
     padding: 20px;
 }
+.first-form {
+    display: flex;
+    gap: 20px;
+}
+.form-group.first-form input::placeholder {
+    color: #000;
+}
+.contact-form-container {
+    padding: 70px 20px;
+    background: #FFFAE5;
+    border-radius: 20px;
+}
+.form-section button.submit-button {
+    width: 20%;
+    padding: 14px;
+    border-radius: 30px;
+}
+.form-section h2 {
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-size: 60px;
+}
+.form-section form.contact-form textarea#message ,.submit-button {
+    margin-top: 30px;
+}
+textarea#message::placeholder{
+	color: #000;
+}
+.form-section input {
+	margin-bottom: 20px;
+	font-family: 'Roboto';
+	font-weight: 400;
+}
+.form-group.first-form {
+	margin-top: 20px;
+}
+.Contact-type-main {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+}
+.Contact-type-sub {
+    width: 33.3%;
+    text-align: center;
+    background: #fff;
+    border-radius: 20px;
+	box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.Contact-type-sub img {
+    width: 60px;
+    margin-top: 20px;
+}
+.Contact-type-sub h4{
+	margin-top: 20px;
+}
+section.Contact-type {
+    margin-top: -150px;
+}
+section.contact-banner {
+    height: 400px;
+}
+.Contact-type-sub p {
+    font-weight: 400;
+    font-size: 16px;
+}
 /* Media Queries css start */
 @media screen and (max-width: 1300px) {
 	.sub-div-con-2 {
@@ -2081,7 +2097,9 @@ section.Our-Company {
 	.Our-team-card-sub p {
 		font-size: 15px;
 	}
-
+	.form-section button.submit-button {
+		width: 25%;
+	}
 	.footer-location p,
 	.footer-phone p,
 	.footer-email p {
@@ -2295,6 +2313,12 @@ section.Our-Company {
 	section.Product-collection-mob {
 		display: block;
 	}
+	.form-section button.submit-button {
+        width: 40%;
+    }
+	.form-section h2 {
+		font-size: 45px;
+	}
 	.footer-section {
 		margin-top: 0px;
 		padding: 50px 1px 65px 0px;
@@ -2494,6 +2518,20 @@ section.Our-Company {
 	counter-container-2 {
         flex-direction: row;
     }
+	section.Contact-type {
+		margin-top: -0px;
+	}
+	section.contact-banner {
+		height: 300px;
+	}
+	.Contact-type-main {
+		display: block;
+	}
+	.Contact-type-sub {
+		width: 100%;
+		padding: 20px;
+		margin-bottom: 20px;
+	}
 	.Our-stre-1 {
         width: 50%;
     }
@@ -2628,6 +2666,9 @@ section.Our-Company {
 	.subscribe-container {
 		padding: 10px;
 	}
+	.contact-form-container {
+		padding: 50px 20px;
+	}
 }
 
 @media screen and (max-width: 600px) {
@@ -2637,6 +2678,12 @@ section.Our-Company {
             .slide {
                 width: 150px;
             }
+			.form-group.first-form {
+				display: block;
+			}
+			.form-section input {
+				margin-bottom: 20px;
+			}
 			.Our-stre-1 {
 				width: 70%;
 			}
@@ -2772,9 +2819,15 @@ section.Our-Company {
 	.mobile-sub-cus {
 		display: block;
 	}
+	.form-section button.submit-button {
+        width: 100%;
+    }
 	.product-collect {
 		display: block;
 	}
+	.form-section h2 {
+        font-size: 28px;
+    }
 
 	.custom-mob {
 		width: 100%;
@@ -2887,6 +2940,15 @@ section.Our-Company {
 		width: 100%;
 		text-align: center;
 	}
+	.main-subs {
+		width: 100%;
+	}
+	input.subscribe-input {
+        width: 155px;
+    }
+	button.subscribe-button {
+		padding: 10px 15px;
+	}
 
 	.Achievement-2-mob {
 		height: 350px;
@@ -2904,6 +2966,9 @@ section.Our-Company {
 	.banner-div {
 		transform: translateY(10%);
 	}
+	.Contact-type-sub p {
+		font-size: 13px;
+	}
 
 	.banner-div p {
 		padding: 10px;
@@ -2914,9 +2979,3 @@ section.Our-Company {
 		font-size: 20px;
 	}
 }
-
-  
-  /* @keyframes scroll {
-	0% {transform: translateX(0);}
-	100% {transform: translatex(-1000%)}
-  } */
