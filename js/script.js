@@ -1,21 +1,21 @@
 // Counter section start
 function animateCounter(element, target) {
   let count = 0;
-  
+
   // Adjust speed based on screen size (faster on smaller screens)
   const screenSize = window.innerWidth;
   const speed = screenSize < 768 ? 100 : 200; // Faster on mobile
   const increment = target / speed; // Adjust increment for smoother counting
 
   const updateCounter = () => {
-    count += increment;
+      count += increment;
 
-    if (count >= target) {
-      element.textContent = target;
-    } else {
-      element.textContent = Math.ceil(count);
-      requestAnimationFrame(updateCounter);
-    }
+      if (count >= target) {
+          element.textContent = target;
+      } else {
+          element.textContent = Math.ceil(count);
+          requestAnimationFrame(updateCounter);
+      }
   };
 
   updateCounter();
@@ -23,26 +23,26 @@ function animateCounter(element, target) {
 
 // Function to trigger counters when they enter the viewport
 function initCounters() {
-  const counters = document.querySelectorAll('.number');
+  const counters = document.querySelectorAll(".number");
   const observerOptions = {
-    threshold: 0.5, // Start animation when 50% of the element is in view
+      threshold: 0.5, // Start animation when 50% of the element is in view
   };
 
   const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        const target = parseInt(entry.target.getAttribute('data-target'));
-        animateCounter(entry.target, target);
-        observer.unobserve(entry.target); // Stop observing once animated
-      }
-    });
+      entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+              const target = parseInt(entry.target.getAttribute("data-target"));
+              animateCounter(entry.target, target);
+              observer.unobserve(entry.target); // Stop observing once animated
+          }
+      });
   }, observerOptions);
 
   counters.forEach((counter) => observer.observe(counter));
 }
 
 // Initialize counters on DOMContentLoaded
-document.addEventListener('DOMContentLoaded', initCounters);
+document.addEventListener("DOMContentLoaded", initCounters);
 
 // Our client script
 $(document).ready(function () {
@@ -51,92 +51,89 @@ $(document).ready(function () {
       margin: 10,
       dots: true,
       nav: false,
-      slideTransition: 'linear',
+      slideTransition: "linear",
       autoplay: true,
-      autoplaySpeed: 10000,      // Extremely smooth 10-second transition
+      autoplaySpeed: 10000, // Extremely smooth 10-second transition
       responsive: {
           0: { items: 1 },
           600: { items: 2 },
-          1000: { items: 5 }
-      }
+          1000: { items: 5 },
+      },
   });
 });
 // Achivement
 // Desktop Carousel Logic
 (function () {
-  const desktopImages = document.querySelectorAll('.Achievement-2 img');
-  const desktopLeftArrow = document.querySelector('.left-arrow img');
-  const desktopRightArrow = document.querySelector('.right-arrow img');
+  const desktopImages = document.querySelectorAll(".Achievement-2 img");
+  const desktopLeftArrow = document.querySelector(".left-arrow img");
+  const desktopRightArrow = document.querySelector(".right-arrow img");
   let desktopIndex = 0;
 
   // Function to update the active desktop image
   function updateDesktopImage(index) {
-    desktopImages.forEach((img, i) => {
-      img.classList.toggle('active', i === index);
-    });
+      desktopImages.forEach((img, i) => {
+          img.classList.toggle("active", i === index);
+      });
   }
 
   // Event listener for the desktop right arrow (Next)
-  desktopRightArrow.addEventListener('click', () => {
-    desktopIndex = (desktopIndex + 1) % desktopImages.length; // Loop back to first
-    updateDesktopImage(desktopIndex);
+  desktopRightArrow.addEventListener("click", () => {
+      desktopIndex = (desktopIndex + 1) % desktopImages.length; // Loop back to first
+      updateDesktopImage(desktopIndex);
   });
 
   // Event listener for the desktop left arrow (Previous)
-  desktopLeftArrow.addEventListener('click', () => {
-    desktopIndex = (desktopIndex - 1 + desktopImages.length) % desktopImages.length; // Loop to last
-    updateDesktopImage(desktopIndex);
+  desktopLeftArrow.addEventListener("click", () => {
+      desktopIndex = (desktopIndex - 1 + desktopImages.length) % desktopImages.length; // Loop to last
+      updateDesktopImage(desktopIndex);
   });
 })();
 
 // Mobile Carousel Logic
 (function () {
-  const mobileImages = document.querySelectorAll('.Achievement-2-mob img');
-  const mobileLeftArrow = document.querySelector('.left-arrow-mob img');
-  const mobileRightArrow = document.querySelector('.right-arrow-mob img');
+  const mobileImages = document.querySelectorAll(".Achievement-2-mob img");
+  const mobileLeftArrow = document.querySelector(".left-arrow-mob img");
+  const mobileRightArrow = document.querySelector(".right-arrow-mob img");
   let mobileIndex = 0;
 
   // Function to update the active mobile image
   function updateMobileImage(index) {
-    mobileImages.forEach((img, i) => {
-      img.classList.toggle('active', i === index);
-    });
+      mobileImages.forEach((img, i) => {
+          img.classList.toggle("active", i === index);
+      });
   }
 
   // Event listener for the mobile right arrow (Next)
-  mobileRightArrow.addEventListener('click', () => {
-    mobileIndex = (mobileIndex + 1) % mobileImages.length; // Loop back to first
-    updateMobileImage(mobileIndex);
+  mobileRightArrow.addEventListener("click", () => {
+      mobileIndex = (mobileIndex + 1) % mobileImages.length; // Loop back to first
+      updateMobileImage(mobileIndex);
   });
 
   // Event listener for the mobile left arrow (Previous)
-  mobileLeftArrow.addEventListener('click', () => {
-    mobileIndex = (mobileIndex - 1 + mobileImages.length) % mobileImages.length; // Loop to last
-    updateMobileImage(mobileIndex);
+  mobileLeftArrow.addEventListener("click", () => {
+      mobileIndex = (mobileIndex - 1 + mobileImages.length) % mobileImages.length; // Loop to last
+      updateMobileImage(mobileIndex);
   });
 })();
 
 function decreaseQuantity() {
-  const quantityInput = document.getElementById('quantity');
+  const quantityInput = document.getElementById("quantity");
   if (quantityInput.value > 1) quantityInput.value--;
 }
 
 function increaseQuantity() {
-  const quantityInput = document.getElementById('quantity');
+  const quantityInput = document.getElementById("quantity");
   quantityInput.value++;
 }
 
-
-
-
 document.addEventListener("DOMContentLoaded", () => {
-  const counters = document.querySelectorAll('.number-2');
+  const counters = document.querySelectorAll(".number-2");
 
   const speed = 200; // Adjust to control the animation speed
 
-  counters.forEach(counter => {
+  counters.forEach((counter) => {
       const updateCount = () => {
-          const target = +counter.getAttribute('data-target'); // Target number
+          const target = +counter.getAttribute("data-target"); // Target number
           const current = +counter.innerText; // Current displayed number
           const increment = target / speed; // Increment value per step
 
@@ -152,17 +149,28 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-
-
 // JavaScript to pause and resume the scroll animation on hover
-const slideTrack = document.querySelector('.slide-track');
+const slideTrack = document.querySelector(".slide-track");
 
 // Pause animation on hover
-slideTrack.addEventListener('mouseenter', () => {
-    slideTrack.style.animationPlayState = 'paused';
+slideTrack.addEventListener("mouseenter", () => {
+  slideTrack.style.animationPlayState = "paused";
 });
 
 // Resume animation when mouse leaves
-slideTrack.addEventListener('mouseleave', () => {
-    slideTrack.style.animationPlayState = 'running';
+slideTrack.addEventListener("mouseleave", () => {
+  slideTrack.style.animationPlayState = "running";
+});
+
+//  form
+// Restrict Name field to letters only
+document.getElementById("name").addEventListener("input", function (e) {
+  // Remove any character that is not a letter or space
+  this.value = this.value.replace(/[^a-zA-Z\s]/g, "");
+});
+
+// Restrict Phone field to numbers only
+document.getElementById("phone").addEventListener("input", function (e) {
+  // Remove any character that is not a number
+  this.value = this.value.replace(/[^0-9]/g, "");
 });
