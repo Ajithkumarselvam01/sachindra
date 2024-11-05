@@ -19,6 +19,9 @@
             crossorigin="anonymous"
             referrerpolicy="no-referrer"
         />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+        
 
         <!-- Bootstrap CSS -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
@@ -35,6 +38,7 @@
         <!-- Custom CSS -->
         <link rel="stylesheet" type="text/css" href="./css/style.css" />
     </head>
+
 
     <body>
         <header>
@@ -218,7 +222,7 @@
         </section>
         <!-- our Team section end -->
         <!-- Our Strength section start -->
-        <section class="oru-strength">
+        <!-- <section class="oru-strength">
             <h2 style="text-align: center;">Our <span style="color: #ab9235;">Strength</span></h2>
             <div class="container">
                 <div class="our-strength-main-div-abo">
@@ -243,10 +247,50 @@
                             </p>
                         </div>
                     </div>
+                   
+                </div>
+                <div class="third-our-strength-sub-div">
+                    <div class="our-strength-sub-div " style="background-image: url('Images/our-strength-1.png'); ">
+                        <div class="Our-stre-1">
+                            <h4>
+                                CUSTOMER <br>
+                               SUPPORT
+                            </h4>
+                            <p>Our customers can rest assured that, not only do we promise the best products and service in the field, our assistanceis ensured throughout the engagement.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </section>
+        </section> -->
         <!-- Our Strength section start -->
+        <section class="oru-strength">
+            <h2 style="text-align: center;">Our <span style="color: #ab9235;">Strength</span></h2>
+            <div class="container">
+                <!-- Owl Carousel Wrapper -->
+                <div class="owl-carousel our-strength-main-div-abo">
+                    <div class="our-strength-sub-div" style="background-image: url('Images/our-strength-1.png');">
+                        <div class="Our-stre-1">
+                            <h4>GREAT <br /> CUSTOMER CARE</h4>
+                            <p>We attribute a great portion of our success to our focus in providing the best customer care possible and ensuring their satisfaction to the best of our abilities.</p>
+                        </div>
+                    </div>
+                    <div class="our-strength-sub-div" style="background-image: url('Images/our-strength-2.png');">
+                        <div class="Our-stre-1 Our-stre-2">
+                            <h4>AWESOME <br /> FEATURE PACK</h4>
+                            <p>We offer end-to-end solutions for designing the product, prototype, and mass production. We have in-house: design department, chemical lab, rubber compounding, moulding, metal fabrication, plastic injection, polyurethane moulding, and carbon composites processing.</p>
+                        </div>
+                    </div>
+                    <div class="our-strength-sub-div" style="background-image: url('Images/our-strength-1.png');">
+                        <div class="Our-stre-1">
+                            <h4>CUSTOMER <br> SUPPORT</h4>
+                            <p>Our customers can rest assured that, not only do we promise the best products and service in the field, our assistance is ensured throughout the engagement.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- End of Owl Carousel Wrapper -->
+            </div>
+        </section>
+        
 
         <!-- Our Features section start -->
         <section class="Our-features">
@@ -407,13 +451,17 @@
         <script type="text/javascript" src="js/jquery.min.js"></script>
         <script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
         <script type="text/javascript" src="js/owl.carousel.min.js"></script>
-        <script type="text/javascript" src="js/script.js"></script>
+        <!-- <script type="text/javascript" src="js/script.js"></script> -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.2/js/bootstrap.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.0/owl.carousel.min.js"></script>
         <!-- Bootstrap JS -->
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+     
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
         <script>
             document.addEventListener("DOMContentLoaded", function () {
                 const counters = document.querySelectorAll(".number-2");
@@ -435,6 +483,30 @@
                     updateCounter();
                 });
             });
+        </script>
+        <script>
+            $(document).ready(function(){
+    $(".our-strength-main-div-abo").owlCarousel({
+        loop: true,
+        margin: 20,
+        nav: true,
+        dots: true,
+        autoplay: true,
+        autoplayTimeout: 10000,
+        responsive: {
+            0: {
+                items: 1
+            },
+            600: {
+                items: 1
+            },
+            1000: {
+                items: 2
+            }
+        }
+    });
+});
+
         </script>
     </body>
 </html>
