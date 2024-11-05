@@ -1961,7 +1961,7 @@ section.Our-features {
 }
 
 .our-strength-sub-div {
-    width: 50%;
+    width: 100%;
     padding: 10px;
 }
 .Our-stre-1 {
@@ -2985,4 +2985,11 @@ section.Our-Company {
 	.sub-pop-1 p {
 		font-size: 20px;
 	}
+}
+.third-our-strength-sub-div {
+    margin-top: 20px; /* Space between the rows */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%; /* Match width with other divs */
 }
