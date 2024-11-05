@@ -2051,6 +2051,12 @@ section.contact-banner {
     font-weight: 400;
     font-size: 16px;
 }
+section.map-location {
+    padding: 0;
+}
+section.subscribe-contact {
+    margin-top: -200px;
+}
 /* Media Queries css start */
 @media screen and (max-width: 1300px) {
 	.sub-div-con-2 {
@@ -2408,8 +2414,9 @@ section.Our-Company {
 		width: 100%;
 		margin-bottom: 30px;
 	}
-	
-
+	section.subscribe-contact {
+		margin-top: 0px;
+	}
 	.prod-img {
         flex-direction: column-reverse; /* Reverse order on mobile */
     }
