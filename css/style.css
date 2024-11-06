@@ -1879,6 +1879,7 @@ section.about-banner {
 .Our-company-sub-2 p {
     font-family: 'Roboto';
     font-weight: 400;
+	text-align: justify;
 }
 .Our-company-sub-1 {
     width: 50%;
@@ -2033,6 +2034,54 @@ section.map-location {
 section.subscribe-contact {
     margin-top: -200px;
 }
+.third-our-strength-sub-div {
+    margin-top: 20px; /* Space between the rows */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%; /* Match width with other divs */
+}
+.our-strength-sub:hover{
+background:#AB9235;
+
+}
+.Our-company-sub-2 .limited-content {
+    max-height: 280px; /* Adjust as needed to fit the first paragraph */
+    overflow-y: auto; /* Allows vertical scrolling */
+	scrollbar-width: none; 
+}
+.conet {
+    transform: translateY(-130px);
+    background: #F8F8F8;
+    padding: 15px;
+    border-radius: 10px;
+}
+.conet h5 {
+    padding: 5px 0;
+}
+.conet p {
+    margin-bottom: 0;
+    font-weight: 400;
+    color: #AB9235;
+}
+.conet-img {
+    text-align: right;
+	padding: 5px;
+}
+.conet-img img {
+    width: 25px;
+    height: 25px;
+}
+.our-team-section h2  {
+    text-align: center;
+}
+p.fist-p {
+    color: #1A202C;
+    text-align: center;
+    font-weight: 400;
+    padding: 20px;
+}
+
 /* Media Queries css start */
 @media screen and (max-width: 1300px) {
 	.sub-div-con-2 {
@@ -2949,11 +2998,4 @@ section.Our-Company {
 	.sub-pop-1 p {
 		font-size: 20px;
 	}
-}
-.third-our-strength-sub-div {
-    margin-top: 20px; /* Space between the rows */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%; /* Match width with other divs */
 }
