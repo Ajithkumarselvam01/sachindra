@@ -2056,6 +2056,9 @@ background:#AB9235;
     padding: 15px;
     border-radius: 10px;
 }
+.oru-strength .owl-nav {
+    display: none;
+}
 .conet h5 {
     padding: 5px 0;
 }
