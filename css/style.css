@@ -2050,7 +2050,7 @@ background:#AB9235;
     overflow-y: auto; /* Allows vertical scrolling */
 	scrollbar-width: none; 
 }
-.conet-container {
+.conet {
     transform: translateY(-130px);
     background: #F8F8F8;
     padding: 15px;
