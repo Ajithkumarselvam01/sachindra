@@ -2064,6 +2064,12 @@ background:#AB9235;
     font-weight: 400;
     color: #AB9235;
 }
+section.our-team-section {
+    padding-bottom: 0;
+}
+section.oru-strength {
+    padding-top: 0;
+}
 .conet-img {
     text-align: right;
 	padding: 5px;
