@@ -18,6 +18,9 @@ body {
 img {
 	width: 100%;
 }
+video{
+	width: 100%; 	
+}
 
 h1,
 h2,
@@ -1899,34 +1902,7 @@ section.Our-Company {
 .Essentials-container {
     max-width: 1000px;
 }
-.Our-team-div {
-    text-align: center;
-}
-section.Our-team {
-    background: #FFF9E5;
-}
-.Our-team-div p {
-    color: #1A202C;
-    font-weight: 400;
-}
-.Our-team-card-main {
-    display: flex;
-    gap: 30px;
-    margin-top: 20px;
-}
-.Our-team-card-sub {
-    text-align: center;
-    background: #fff;
-    padding: 20px;
-}
-.Our-team-card-sub img {
-    width: 100px;
-    height: 100px;
-}
-.Our-team-card-sub p {
-    font-weight: 400;
-    font-size: 16px;
-}
+
 section.Our-features {
     background: #F7F4EB;
 }
@@ -2100,9 +2076,7 @@ section.Our-Company {
 	nav .links a:not(:has(img)) {
 		padding: 5px;
 	}
-	.Our-team-card-sub p {
-		font-size: 15px;
-	}
+
 	.form-section button.submit-button {
 		width: 25%;
 	}
@@ -2549,12 +2523,6 @@ section.Our-Company {
         width: 100%;
         margin-bottom: 30px;
     }
-	.Our-team-card-main {
-		display: block;
-	}
-	.Our-team-card-sub {
-		margin-bottom: 20px;
-	}
 	section.conatct-section {
 		transform: translateY(0px);
 	}
@@ -2863,10 +2831,6 @@ section.Our-Company {
 @media screen and (max-width: 425px) {
 	.counter-container-2 {
         flex-direction: column;
-    }
-
-	.Our-team-card-sub p {
-        text-align: justify;
     }
 	section.Essentials-section {
 		padding: 30px;
