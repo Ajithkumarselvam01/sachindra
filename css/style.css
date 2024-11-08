@@ -882,8 +882,11 @@ input::placeholder {
 
 section.subscribe {
 	position: relative;
+	padding:30px;
 }
-
+section.our-collection {
+    padding: 0 50px;
+}d
 .footer-container {
 	width: 90%;
 	max-width: 1400px;
@@ -1323,29 +1326,29 @@ section.product-banner {
 	object-fit: cover;
 }
 
-.discount-badge {
-	position: absolute;
-	top: 10px;
-	left: 10px;
-	background-color: #b49d46;
-	color: white;
-	padding: 5px 10px;
-	border-radius: 4px;
-	font-size: 14px;
-	z-index: 99;
+ /* Base styles for the weight options container */
+ .weight-options {
+	display: flex;
+	gap: 10px;
 }
 
-.discount-badge-add {
-	position: absolute;
-	top: 1px;
-	right: 5px;
-	background-color: #b49d46;
-	color: white;
-	padding: 5px 10px;
-	border-radius: 4px;
-	font-size: 14px;
+/* Base styles for each weight option */
+.weight-option {
+	padding: 10px 20px;
+	border: 1px solid #ccc;
+	border-radius: 20px;
+	color: #333;
+	background-color: #fff;
+	cursor: pointer;
+	transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* Style for the selected weight option */
+.weight-option.selected {
+	background-color: #AB9235; /* Selected background color */
+	color: #fff; /* Text color for contrast */
+	border-color: #AB9235; /* Border color to match the selected state */
+}
 .product-details {
 	text-align: left;
 	padding: 0 15px;
@@ -1527,15 +1530,19 @@ footer.product-footer {
 
 /* Left: Product Images */
 .prod-img {
-    display: flex;
+    display: block;
     width: 50%;
 }
 
 .prod-small-img {
     width: 30%; /* Adjust for tighter control */
     margin-right: 20px;
+	display: flex;
+    gap: 30px;
 }
-
+.prod-big-img {
+    margin-bottom: 20px;
+}
 .prod-small-img img {
     width: 100%;
     aspect-ratio: 1;
@@ -1547,9 +1554,20 @@ footer.product-footer {
 	height: 180px;
 	margin-bottom: 25px;
 }
-
+.Dev-card {
+    text-align: center;
+    background: #F4F4F4;
+    padding-top: 10px;
+    border-radius: 10px;
+}
+.Dev-card img {
+    width: 50px;
+    border-radius: 45%;
+    background: #AA9031;
+}
 .prod-small-img img:hover {
-    transform: scale(1.05);
+    transform: scale(1.0);
+	border: 1px solid #AA9031;
 }
 
 .prod-big-img img {
@@ -1563,7 +1581,7 @@ footer.product-footer {
     width: 45%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 .prod-det h2 {
@@ -1618,11 +1636,6 @@ footer.product-footer {
     color: #414141;
 }
 
-.weight-option:hover {
-    background-color: #eaeaea;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-}
-
 /* Quantity Selector */
 .quantity-container {
 	width: 30%;
@@ -1642,12 +1655,15 @@ footer.product-footer {
     transition: background-color 0.3s;
 	background:none;
 }
-
+.devliry-div {
+    gap: 50px;
+	margin-top: 20px;
+}
 
 .quantity-input {
     width: 50px;
     text-align: center;
-    padding: 10px;
+    padding: 8px;
     border: none;
     border-radius: 5px;
 }
@@ -1690,7 +1706,8 @@ footer.product-footer {
 }
 
 .add-to-cart:hover {
-    background-color: #e2b33f;
+    background-color: #AB9235;
+	color:#fff;
 }
 
 .buy-now {
@@ -2705,9 +2722,18 @@ section.Our-Company {
 }
 
 @media screen and (max-width: 600px) {
-	.slide-track {
+	       .slide-track {
                 animation: scroll 10s linear infinite;
             }
+			.weight-options {
+				display: block;
+				gap: 0px;
+				margin: 10px 0;
+				text-align: center;
+			}
+			.add-to-cart {
+				width:100%;
+			}
             .slide {
                 width: 150px;
             }
@@ -2893,6 +2919,9 @@ section.Our-Company {
 	section.Essentials-section {
 		padding: 30px;
 	}
+	section.subscribe {
+        padding: 5px 0px;
+    }
 	.counter-2::after {
         display: none; /* No border on single column layout */
     }
