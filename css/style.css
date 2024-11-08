@@ -879,6 +879,31 @@ input::placeholder {
 	padding: 150px 1px 65px 0px;
 	margin-top: -150px;
 }
+ /* Default styles */
+ #heart-icon {
+    color: gray;
+    cursor: pointer;
+    font-size: 24px; /* Adjust size as needed */
+    transition: color 0.3s ease;
+}
+
+/* Liked state (turns red) */
+#heart-icon.liked {
+    color: red;
+}
+
+/* Animation class for Instagram-like effect */
+#heart-icon.animate {
+    animation: pop 0.3s ease;
+}
+.heart-icon {
+    width: 50%;
+    text-align: right;
+}
+.WEIGTH-h3 {
+    width: 100%;
+    display: flex;
+}
 
 section.subscribe {
 	position: relative;
@@ -1589,6 +1614,7 @@ footer.product-footer {
     margin-bottom: 8px;
     color: #333;
 	font-family: 'Roboto';
+	width: 50%;
 }
 
 .reviews-counter {
