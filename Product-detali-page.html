@@ -34,6 +34,23 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" type="text/css" href="./css/style.css" />
   </head>
+  <style>
+   
+
+/* Pop animation */
+@keyframes pop {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.3); /* Slightly larger */
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+  </style>
     <body>
         <header>
             <!-- NAV_BAR_SECTION START -->
@@ -91,7 +108,12 @@
 
                                 <!-- Right: Product Details -->
                                 <div class="cont-det">
+                                   <div class="WEIGTH-h3 ">
                                     <h2>Weight Plate</h2>
+                                    <div class="heart-icon">
+                                        <i id="heart-icon" class="fa fa-heart" aria-hidden="true" onclick="toggleHeart()"></i>
+                                    </div>
+                                   </div>
                                     <div class="reviews-counter">
                                         <i class="fa fa-star" style="color: #ECB605;" aria-hidden="true"></i>
                                         <i class="fa fa-star" style="color: #ECB605;" aria-hidden="true"></i>
@@ -419,7 +441,23 @@
           option.classList.add('selected');
       });
   });
-});add-cart
+});
+function toggleHeart() {
+    const heartIcon = document.getElementById("heart-icon");
+    
+    // Toggle the "liked" class to change the color
+    heartIcon.classList.toggle("liked");
+    
+    // Add the "animate" class to trigger the animation
+    heartIcon.classList.add("animate");
+
+    // Remove the "animate" class after the animation completes
+    setTimeout(() => {
+        heartIcon.classList.remove("animate");
+    }, 300); // Duration should match animation duration in CSS
+}
+
+
         </script>
     </body>
 </html>
