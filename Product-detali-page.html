@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>product detail</title>
+    <title>Product Detail</title>
     
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="Images/Sachindra-logu.png" />
@@ -22,20 +22,18 @@
     <!-- Owl Carousel CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.0/assets/owl.carousel.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.0/assets/owl.theme.default.min.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900&display=swap" 
+          rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap" 
-          rel="stylesheet" />
-          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-        </head>
+          rel="stylesheet">
+
     <!-- Custom CSS -->
     <link rel="stylesheet" type="text/css" href="./css/style.css" />
-</head>
+  </head>
     <body>
         <header>
             <!-- NAV_BAR_SECTION START -->
@@ -68,6 +66,7 @@
                 </label>
             </nav>
             <!-- NAV_BAR_SECTION END -->
+        </header>    
           <!-- Product Detail Section -->
                     <section class="prod-det">
                         <div class="container">
@@ -79,13 +78,14 @@
  
                                 <!-- Left: Product Images -->
                                 <div class="prod-img">
-                                    <div class="prod-small-img">
-                                        <img src="Images/small-icon-1.png" alt="Product Image 1">
-                                        <img src="Images/small-icon-2.png" alt="Product Image 2">
-                                        <img src="Images/small-icon-3.png" alt="Product Image 3">
-                                    </div>
+                                   
                                     <div class="prod-big-img">
-                                        <img src="Images/weight-plate.png" class="img-fluid rounded-top" alt="Weight Plate">
+                                        <img src="Images/Plate-image.png" class="img-fluid rounded-top" alt="Weight Plate">
+                                    </div>
+                                    <div class="prod-small-img">
+                                        <img src="Images/5-kg-plate.png" alt="Product Image 1">
+                                        <img src="Images/10-Kg-plate.png" alt="Product Image 2">
+                                        <img src="Images/20-kg-plate.png" alt="Product Image 3">
                                     </div>
                                 </div>
 
@@ -93,11 +93,11 @@
                                 <div class="cont-det">
                                     <h2>Weight Plate</h2>
                                     <div class="reviews-counter">
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" style="color: #ECB605;" aria-hidden="true"></i>
+                                        <i class="fa fa-star" style="color: #ECB605;" aria-hidden="true"></i>
+                                        <i class="fa fa-star" style="color: #ECB605;" aria-hidden="true"></i>
+                                        <i class="fa fa-star" style="color: #ECB605;" aria-hidden="true"></i>
+                                        <i class="fa fa-star" style="color: #ECB605;" aria-hidden="true"></i>
                                         <p>(32 reviews)</p>
                                     </div>
 
@@ -110,15 +110,16 @@
                                     </ul>
 
                                     <!-- Weight Options -->
-                                    <div class="weight-options">
-                                        <h4 class="weight-option">5kg</h4>
-                                        <h4 class="weight-option">10kg</h4>
-                                        <h4 class="weight-option">20kg</h4>
-                                        <h4 class="weight-option">25kg</h4>
-                                    </div>
-
+                                        <div class="weight-options">
+                                            <h4 class="weight-option">5kg x 2</h4>
+                                            <h4 class="weight-option">10kg x 2</h4>
+                                            <h4 class="weight-option">15kg x 2</h4>
+                                            <h4 class="weight-option">20kg x 2</h4>
+                                            <h4 class="weight-option">25kg x 2</h4>
+                                        </div>
+                                    
                                    <!-- Quantity Selector with Add to Cart Button -->
-                                    <div class="add-cart">
+                                    <div class="add-cart ">
                                         <div class="quantity-container">
                                             <button class="quantity-btn" onclick="decreaseQuantity()">-</button>
                                             <input type="number" class="quantity-input" id="quantity" value="1" min="1">
@@ -131,12 +132,25 @@
                                     <div class="btn-group">
                                         <a href="#" class="btn buy-now">Buy Now</a>
                                     </div>
+                                 <!-- Delivery  -->
+                                  <div class="devliry-div row">
+                                    <div class="Dev-card col-lg-3">
+                                           <img src="Images/delivery-truck.gif" alt="">
+                                           <br>
+                                           Free Shipping
+                                    </div>
+                                    <div class="Dev-card col-lg-3">
+                                           <img src="Images/shield.gif" alt="">
+                                           <p>1yr Warranty</p>
+                                    </div>
+                                    <div class="Dev-card col-lg-3">
+                                        <img src="Images/Frame.png" alt="">
+                                      <p>7 Days Return</p>
+                                    </div>
 
+                                  </div>
 
-                                    <!-- Shipping & Delivery Info -->
-                                    <p><i class="fas fa-shipping-fast"></i> Free worldwide shipping on all orders over $100</p>
-                                    <p><i class="fas fa-box"></i> Delivers in: 3-7 Working Days <a href="#" style="color: #AA9031;">Shipping & Return</a></p>
-                                </div>
+                                    </div>
                             </div>
                         </div>
                     </section>
@@ -144,13 +158,17 @@
                         <div class="container">
                             <div class="main-desc">
                                 <h2>Description | <span>Reviews</span></h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                <p>These plates are covered with a layer of durable rubber that makes them quieter and less likely to damage floors compared to traditional iron or steel plates. Rubber plates often have a smoother, softer feel and come in various colors to easily identify different weights. They also provide a non-slip grip for easier handling and are often resistant to scuffs, making them ideal for home gyms and commercial fitness centers. Some designs include built-in handles, making them versatile for a range of exercises, not just barbell use.</p>
+                                <h4>Key Highlights</h4>
                                 <ul>
-                                    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
-                                    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                                    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
-                                    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+                                   <li>Made with Fresh Virgin Rubber.</li>
+                                   <li>Thin Profile weight plate compare to others.</li>
+                                   <li>Raised Flange to Protect weight number.</li>
+                                   <li>Metal Ring for Easy Loading/Unloading.</li>
+                                   <li>Featured in The Economic Times</li>
+                                   <li>PAN India Free Home Delivery in 4 days</li>
                                 </ul>
+
 
                             </div>
 
@@ -163,7 +181,7 @@
                           <div class="owl-carousel product-main-div-pro">
                             <div class="product-card">
                               <a href="">
-                                <div class="discount-badge">-30%</div>
+                                <div class="discount-badge"></div>
                                 <img src="Images/Our-collection-of-product-1.png" alt="Diaphragm" class="product-image" />
                                 <div class="product-details">
                                   <h5 class="product-name">Seal</h5>
@@ -175,7 +193,7 @@
                             </div>
                             <div class="product-card">
                               <a href="">
-                                <div class="discount-badge">-30%</div>
+                                <div class="discount-badge"></div>
                                 <img src="Images/Our-collection-of-product-2.png" alt="Diaphragm" class="product-image" />
                                 <div class="product-details">
                                   <h5 class="product-name">BEADING</h5>
@@ -187,7 +205,7 @@
                             </div>
                             <div class="product-card">
                                 <a href="">
-                                  <div class="discount-badge">-30%</div>
+                                  <div class="discount-badge"></div>
                                   <img src="Images/Our-collection-of-product-3.png" alt="Diaphragm" class="product-image" />
                                   <div class="product-details">
                                     <h5 class="product-name">O RINGS</h5>
@@ -199,7 +217,7 @@
                               </div>
                               <div class="product-card">
                                 <a href="">
-                                  <div class="discount-badge">-30%</div>
+                                  <div class="discount-badge"></div>
                                   <img src="Images/Our-collection-of-product-1.png" alt="Diaphragm" class="product-image" />
                                   <div class="product-details">
                                     <h5 class="product-name">O RINGS</h5>
@@ -211,7 +229,7 @@
                               </div>
                               <div class="product-card">
                                 <a href="">
-                                  <div class="discount-badge">-30%</div>
+                                  <div class="discount-badge"></div>
                                   <img src="Images/Our-collection-of-product-2.png" alt="Diaphragm" class="product-image" />
                                   <div class="product-details">
                                     <h5 class="product-name">O RINGS</h5>
@@ -223,7 +241,7 @@
                               </div>
                               <div class="product-card">
                                 <a href="">
-                                  <div class="discount-badge">-30%</div>
+                                  <div class="discount-badge"></div>
                                   <img src="Images/Our-collection-of-product-3.png" alt="Diaphragm" class="product-image" />
                                   <div class="product-details">
                                     <h5 class="product-name">O RINGS</h5>
@@ -235,7 +253,7 @@
                               </div>
                               <div class="product-card">
                                 <a href="">
-                                  <div class="discount-badge">-30%</div>
+                                  <div class="discount-badge"></div>
                                   <img src="Images/Our-collection-of-product-1.png" alt="Diaphragm" class="product-image" />
                                   <div class="product-details">
                                     <h5 class="product-name">O RINGS</h5>
@@ -389,5 +407,19 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.2/js/bootstrap.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.0/owl.carousel.min.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+  const weightOptions = document.querySelectorAll('.weight-option');
+  
+  weightOptions.forEach(option => {
+      option.addEventListener('click', () => {
+          // Remove 'selected' class from all options
+          weightOptions.forEach(opt => opt.classList.remove('selected'));
+          // Add 'selected' class to the clicked option
+          option.classList.add('selected');
+      });
+  });
+});add-cart
+        </script>
     </body>
 </html>
