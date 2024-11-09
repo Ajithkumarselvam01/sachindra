@@ -2290,6 +2290,19 @@ section.Our-Company {
 	.prod-big-img img {
 		height: 600px;
 	}
+	.product-main-div {
+		display: block;
+	}
+	.product-cart-list-sub {
+		width: 100%;
+	}
+	.cart-summery-1 {
+		width: 100%;
+	}
+	.product-cart-list-sub {
+		width: 100%;
+		overflow: scroll;
+	}
 	nav {
 		padding: 10px 0% 20px 2%;
 	}
