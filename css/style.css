@@ -913,8 +913,8 @@ section.our-collection {
     padding: 0 50px;
 }d
 .footer-container {
-	width: 90%;
-	max-width: 1400px;
+	width: 80%;
+	max-width: 1300px;
 	margin: auto;
 }
 
@@ -2093,6 +2093,17 @@ background:#AB9235;
     overflow-y: auto; /* Allows vertical scrolling */
 	scrollbar-width: none; 
 }
+section.Create-section {
+    padding: 0;
+}
+.Create-sub-1 {
+    padding: 0;
+}
+.Create-sub-1.create-form {
+    padding: 0;
+    margin: 0;
+    background: #F7F4EB;
+}
 .conet {
     transform: translateY(-130px);
     background: #F8F8F8;
@@ -2133,7 +2144,14 @@ p.fist-p {
     font-weight: 400;
     padding: 20px;
 }
-
+/* cart */
+.div-1 {
+    text-align: center;
+}
+.Active-page {
+    display: flex;
+    gap: 20px;
+}
 /* Media Queries css start */
 @media screen and (max-width: 1300px) {
 	.sub-div-con-2 {
