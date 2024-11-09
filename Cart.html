@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Cart</title>
+      <!-- Favicon -->
+      <link rel="icon" type="image/x-icon" href="Images/Sachindra-logu.png" />
+      <!-- Animate.css -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+      <!-- Font Awesome -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" 
+         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" 
+         crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <!-- Bootstrap CSS -->
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+      <!-- Owl Carousel CSS -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.0/assets/owl.carousel.min.css" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.0/assets/owl.theme.default.min.css" />
+      <!-- Google Fonts -->
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap" 
+         rel="stylesheet" />
+      <!-- Custom CSS -->
+      <link rel="stylesheet" type="text/css" href="./css/style.css" />
+   </head>
+   <style>
+      img.product-image {
+      object-fit: none;
+      }
+      .product-cart-list-sub {
+      width: 70%;
+      }
+      .cart-1-sec {
+      text-align: center;
+      margin: 20px 0;
+      }
+      .cart-1-sec h1 {
+      font-size: 36px;
+      font-weight: bold;
+      margin-bottom: 30px;
+      }
+      .cart-main {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      }
+      .Active-page {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      /* Center content vertically */
+      color: #9a9a9a;
+      /* Default gray color for inactive steps */
+      text-align: center;
+      padding: 10px;
+      }
+      .Active-page h4 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: #d3d3d3;
+      /* Default background color for inactive steps */
+      color: #fff;
+      font-size: 18px;
+      margin-bottom: 5px;
+      }
+      .Active-page p {
+      font-size: 14px;
+      margin: 0;
+      }
+      /* Active step styling */
+      .Active-page.active h4 {
+      background-color: #b19139;
+      /* Gold color for active step */
+      }
+      .Active-page.active p {
+      color: #000;
+      /* Black text for active step */
+      }
+      /* Container styling */
+      .cart-container {
+      width: 100%;
+      max-width: 800px;
+      margin: 20px auto;
+      border-collapse: collapse;
+
+      color: #333;
+      }
+      /* Table styling */
+      .cart-container th, .cart-container td {
+      padding: 10px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+      }
+      .cart-container th {
+      font-weight: bold;
+      }
+      /* Product row styling */
+      .cart-container .product-row {
+      display: flex;
+      align-items: center;
+      gap:20px;
+      }
+      .product-image {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      margin-right: 10px;
+      }
+      .product-name {
+      display: flex;
+      flex-direction: column;
+      }
+      /* Quantity control styling */
+      .quantity-control {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      width: 150px;
+      border: 1px solid #6C7275;
+      }
+      .quantity-control button {
+      padding: 10px 15px;
+      cursor: pointer;
+      border: none;
+      background: no-repeat;
+      }
+      .quantity-input {
+      width: 40px;
+      text-align: center;
+      border: none;
+      margin: 0 5px;
+      }
+      .remove {
+      color: #6C7275;
+      cursor: pointer;
+      text-decoration: none;
+      padding: 5px 0;
+      }
+      /* Container styling */
+      .cart-summary {
+      width: 100%;
+      margin: 20px auto;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      color: #333;
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      .cart-summary h2 {
+      font-size: 18px;
+      margin-bottom: 15px;
+      font-weight: bold;
+      }
+      .shipping-option {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+      padding: 15px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      cursor: pointer;
+      }
+      .shipping-option input {
+      margin-right: 10px;
+      }
+      /* Selected style */
+      .shipping-option.selected {
+      border-color: #b89d45;
+      background-color: #f9f6f0;
+      }
+      .cart-summary .subtotal, .cart-summary .total {
+      display: flex;
+      justify-content: space-between;
+      font-weight: bold;
+      margin-top: 10px;
+      font-size: 16px;
+      padding:10px;
+      }
+      /* Checkout button styling */
+      .checkout-btn {
+      display: block;
+      width: 100%;
+      margin-top: 20px;
+      padding: 10px;
+      background-color: #b89d45;
+      color: #fff;
+      text-align: center;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      }
+      .checkout-btn:hover {
+      background-color: #a3873d;
+      }
+      .cart-summery-1 {
+      width: 30%;
+      }
+      /* General styles */
+
+      /* Change color of selected option */
+      .shipping-option input[type="radio"]:checked + span,
+      .shipping-option input[type="radio"]:checked + span + span {
+        color: #AB9235;
+      }
+      
+
+      @media (max-width: 768px) {
+      .cart-main {
+      flex-direction: column;
+      }
+      }
+   </style>
+   <body>
+      <header>
+         <!-- NAV_BAR_SECTION START -->
+         <nav>
+            <input type="checkbox" id="nav-toggle" />
+            <div class="logo">
+               <a href="">
+               <img src="Images/Sachindra-logu.png" alt="AFMS-Logo" title="AFMS-Logo" />
+               </a>
+            </div>
+            <ul class="links">
+               <li><a href="#">About Us</a></li>
+               <li><a href="#about">Our Products</a></li>
+               <li><a href="#work">Custom Rubber Solutions</a></li>
+               <li><a href="#">Login / Signup</a></li>
+               <li>
+                  <a href="#"><img class="icon" src="Images/user-logu.png" alt="User Icon" title="User Icon" /></a>
+               </li>
+               <li>
+                  <a href="#"><img class="icon" src="Images/Cart-logu.png" alt="Cart Icon" title="Cart Icon" /></a>
+               </li>
+               <li>
+                  <a href="#"><img class="icon" src="Images/Search-logu.png" alt="Search Icon" title="Search Icon" /></a>
+               </li>
+            </ul>
+            <label for="nav-toggle" class="icon-burger">
+               <div class="line"></div>
+               <div class="line"></div>
+               <div class="line"></div>
+            </label>
+         </nav>
+         <!-- NAV_BAR_SECTION END -->
+      </header>
+      <section class="cart-1-sec">
+         <div class="container">
+            <div class="div-1">
+               <h1>Cart</h1>
+               <div class="cart-main row">
+                  <div class="Active-page active col-lg-4">
+                     <h4>1</h4>
+                     <p>Shopping cart</p>
+                  </div>
+                  <div class="Active-page col-lg-4">
+                     <h4>2</h4>
+                     <p>Checkout details</p>
+                  </div>
+                  <div class="Active-page col-lg-4">
+                     <h4>3</h4>
+                     <p>Order complete</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <section class="product-list-cart">
+         <div class="container">
+            <div class="product-main-div">
+               <div class="product-cart-list-sub">
+                  <table class="cart-container">
+                     <thead>
+                        <tr>
+                           <th>Product</th>
+                           <th>Quantity</th>
+                           <th>Price</th>
+                           <th>Subtotal</th>
+                        </tr>
+                     </thead>
+                     <tbody id="cart-items">
+                        <!-- Product 1 -->
+                        <tr>
+                           <td>
+                              <div class="product-row">
+                                 <img src="Images/small-icon-3.png" alt="Weight plate" class="product-image">
+                                 <div class="product-name">
+                                    <span>Weight plate</span>
+                                    <span style="color: #6C7275; font-weight: 400; font-size: 16px;">Weight: 5kg</span>
+                                    <span class="remove" onclick="removeItem(this)"><i class="fa fa-times" aria-hidden="true"></i> Remove</span>
+                                 </div>
+                              </div>
+                           </td>
+                           <td>
+                              <div class="quantity-control">
+                                 <button onclick="changeQuantity(this, -1)">-</button>
+                                 <input type="text" class="quantity-input" value="2" readonly>
+                                 <button onclick="changeQuantity(this, 1)">+</button>
+                              </div>
+                           </td>
+                           <td>₹19.00</td>
+                           <td class="subtotal">₹38.00</td>
+                        </tr>
+                        <!-- Product 2 -->
+                        <tr>
+                           <td>
+                              <div class="product-row">
+                                 <img src="Images/small-icon-1.png" alt="Rubber flexit" class="product-image">
+                                 <div class="product-name">
+                                    <span>Rubber flexit</span>
+                                    <span style="color: #6C7275; font-weight: 400; font-size: 16px;">Weight: 5kg</span>
+                                    <span class="remove" onclick="removeItem(this)"><i class="fa fa-times" aria-hidden="true"></i> Remove</span>
+                                 </div>
+                              </div>
+                           </td>
+                           <td>
+                              <div class="quantity-control">
+                                 <button onclick="changeQuantity(this, -1)">-</button>
+                                 <input type="text" class="quantity-input" value="2" readonly>
+                                 <button onclick="changeQuantity(this, 1)">+</button>
+                              </div>
+                           </td>
+                           <td>₹19.00</td>
+                           <td class="subtotal">₹38.00</td>
+                        </tr>
+                        <!-- Product 3 -->
+                        <tr>
+                           <td>
+                              <div class="product-row">
+                                 <img src="Images/Paste image.png" alt="Silicon diaphragm" class="product-image">
+                                 <div class="product-name">
+                                    <span>Silicon diaphragm</span>
+                                    <span style="color: #6C7275; font-weight: 400; font-size: 16px;">Weight: 5kg</span>
+                                    <span class="remove" onclick="removeItem(this)"><i class="fa fa-times" aria-hidden="true"></i> Remove</span>
+                                 </div>
+                              </div>
+                           </td>
+                           <td>
+                              <div class="quantity-control">
+                                 <button onclick="changeQuantity(this, -1)">-</button>
+                                 <input type="text" class="quantity-input" value="1" readonly>
+                                 <button onclick="changeQuantity(this, 1)">+</button>
+                              </div>
+                           </td>
+                           <td>₹39.00</td>
+                           <td class="subtotal">₹39.00</td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+               <div class="cart-summery-1">
+                  <div class="cart-summary">
+                     <h2>Cart summary</h2>
+                     <!-- Shipping options -->
+                     <label class="shipping-option selected">
+                     <input type="radio" name="shipping" value="0" data-price="0" checked onchange="updateTotal()">
+                     <span>Shipping</span>
+                     <span>₹0.00</span>
+                     </label>
+                     <label class="shipping-option">
+                     <input type="radio" name="shipping" value="15" data-price="15" onchange="updateTotal()">
+                     <span>Express shipping</span>
+                     <span>+₹15.00</span>
+                     </label>
+                     <label class="shipping-option">
+                     <input type="radio" name="shipping" value="0.21" data-percent="21" onchange="updateTotal()">
+                     <span>Pick Up</span>
+                     <span>%21.00</span>
+                     </label>
+                     <!-- Subtotal and Total -->
+                     <div class="subtotal">
+                        <span>Subtotal</span>
+                        <span id="subtotal">₹0.00</span>
+                     </div>
+                     <div class="total">
+                        <span>Total</span>
+                        <span id="total">₹0.00</span>
+                     </div>
+                     <!-- Checkout Button -->
+                     <button class="checkout-btn">Checkout</button>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- Subscribe section start -->
+      <section class="subscribe">
+         <div class="container">
+            <div class="main-subs" style="background-image: url(Images/Sub-button.png);">
+               <div class="Subs-sub">
+                  <h2>Newsletter </h2>
+                  <p>Sign Up for Newsletter
+                     We’ll be with you on every walk of life on how to identify new opportunities.
+                  </p>
+               </div>
+               <div class="Subs-sub">
+                  <div class="subscribe-container">
+                     <input type="email" class="subscribe-input" placeholder="Your email address" />
+                     <button class="subscribe-button">Subscribe</button>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- Subscribe section end -->
+      <!-- footer section -->
+      <footer class="footer-section">
+         <div class=" footer-container  container">
+            <div class="footer-content">
+               <div class="footer-row">
+                  <div class="footer-column footer-1">
+                     <div class="footer-widget">
+                        <div class="footer-logo">
+                           <a href="index.html">
+                           <img src="Images/Sachindra-logu.png" class="img-footer" alt="Sachindra" title="Sachindra" />
+                           </a>
+                        </div>
+                        <div class="footer-text">
+                           <p>
+                              RubberPlus is a leading manufacturer of high-quality rubber products, committed to delivering exceptional solutions across multiple industries. With a focus on innovation, durability, and customer satisfaction, we provide custom rubber components that meet the highest standards of performance and reliability.
+                           </p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="footer-column footer-2">
+                     <div class="footer-widget">
+                        <h3 class="footer-heading">Quick Links</h3>
+                        <ul class="quick-links">
+                           <li><a href="#">Home</a></li>
+                           <li><a href="#">About</a></li>
+                           <li><a href="#">Products</a></li>
+                           <li><a href="#">Achievements & Certifications</a></li>
+                           <li><a href="#">Testimonials</a></li>
+                           <li><a href="#">Contact</a></li>
+                        </ul>
+                     </div>
+                  </div>
+                  <div class="footer-column footer-3">
+                     <div class="footer-widget">
+                        <h3 class="footer-heading">Contact Us</h3>
+                        <div class="footer-location">
+                           <img src="Images/footer-icon-1.png" alt="" />
+                           <p>
+                              +91-9447 76 0215 | +91-8606 05 2220 <br />
+                              +91-8606 05 2221 
+                           </p>
+                        </div>
+                        <div class="footer-phone">
+                           <img src="Images/footer-icon-2.png" alt="" />
+                           <p>
+                              contact@rubberplus.in / <br />
+                              adarshpj@rubberplus.in
+                           </p>
+                        </div>
+                        <div class="footer-email">
+                           <img src="Images/footer-icon-3.png" alt="" />
+                           <p>Sachindra Rubber Plus LLP Vallivattom, Thrissur Kerala - 680 123</p>
+                        </div>
+                        <div class="social-icons">
+                           <a href="https://instagram.com" target="_blank">
+                           <img src="Images/instagram-icon.png" alt="Instagram" title="Instagram" />
+                           </a>
+                           <a href="https://twitter.com" target="_blank">
+                           <img src="Images/X-icon.png" alt="X" title="X" />
+                           </a>
+                           <a href="https://facebook.com" target="_blank">
+                           <img src="Images/Facebook-icon.png" alt="Facebook" title="Facebook" />
+                           </a>
+                           <a href="https://linkedin.com" target="_blank">
+                           <img src="Images/Linkedin-icon.png" alt="Linkedin" title="Linkedin" />
+                           </a>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="footer-column footer-4">
+                     <div class="footer-widget">
+                        <div class="form-container">
+                           <h2>Request a Quote Today!</h2>
+                           <form action="#" method="POST" id="contactForm">
+                              <div class="form-group">
+                                 <input type="text" id="name" name="name" required placeholder="Name" />
+                              </div>
+                              <div class="form-group">
+                                 <input type="tel" id="phone" name="phone" required placeholder="Phone number" pattern="[0-9]{10}" title="Please enter a 10-digit phone number" />
+                              </div>
+                              <div class="form-group">
+                                 <input type="email" id="email" name="email" required placeholder="Email" />
+                              </div>
+                              <div class="form-group">
+                                 <select id="product" name="product" required>
+                                    <option value="">Products & Solutions</option>
+                                    <option value="product1">Product 1</option>
+                                    <option value="product2">Product 2</option>
+                                    <option value="solution1">Solution 1</option>
+                                    <option value="solution2">Solution 2</option>
+                                 </select>
+                              </div>
+                              <div class="form-group">
+                                 <textarea id="message" name="message" rows="1" required placeholder="Message"></textarea>
+                              </div>
+                              <button type="submit" class="submit-button">Submit</button>
+                           </form>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </footer>
+      <div class="copyright-section">
+         <p>Copyright @ 2024. Sachindra Rubber Plus LLP</p>
+      </div>
+      <script type="text/javascript" src="js/jquery.min.js"></script>
+      <script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
+      <script type="text/javascript" src="js/owl.carousel.min.js"></script>
+      <script type="text/javascript" src="js/script.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.2/js/bootstrap.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.0/owl.carousel.min.js"></script>
+      <!-- Bootstrap JS -->
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+      <script>
+         // Function to change quantity and update subtotal for a product
+         function changeQuantity(button, delta) {
+             const quantityInput = button.parentElement.querySelector('.quantity-input');
+             let quantity = parseInt(quantityInput.value);
+             const price = parseFloat(button.closest('tr').querySelector('td:nth-child(3)').textContent.replace('₹', '').trim());
+         
+             // Ensure quantity doesn't go below 1
+             quantity = Math.max(1, quantity + delta);
+             quantityInput.value = quantity;
+         
+             // Update the subtotal for this row
+             const subtotal = quantity * price;
+             button.closest('tr').querySelector('.subtotal').textContent = '₹' + subtotal.toFixed(2);
+         
+             // Update the overall cart summary
+             updateCartSummary();
+         }
+         
+         // Function to remove an item from the cart
+         function removeItem(element) {
+             const row = element.closest('tr');
+             row.remove(); // Remove the product row
+         
+             // Update the cart summary after item removal
+             updateCartSummary();
+         }
+         
+         // Function to calculate the subtotal (sum of all product subtotals)
+         function updateCartSummary() {
+             let subtotal = 0;
+         
+             // Loop through each product row and sum up the subtotals
+             document.querySelectorAll('.subtotal').forEach(item => {
+                 subtotal += parseFloat(item.textContent.replace('₹', '').trim());
+             });
+         
+             // Update the displayed subtotal
+             document.getElementById('subtotal').textContent = '₹' + subtotal.toFixed(2);
+         
+             // Update the total (which includes shipping)
+             updateTotal();
+         }
+         
+         // Function to calculate the total (including shipping)
+         function updateTotal() {
+             let subtotal = parseFloat(document.getElementById('subtotal').textContent.replace('₹', '').trim());
+             const selectedShipping = document.querySelector('input[name="shipping"]:checked');
+         
+             // Highlight the selected shipping option
+             document.querySelectorAll('.shipping-option').forEach(option => option.classList.remove('selected'));
+             selectedShipping.closest('.shipping-option').classList.add('selected');
+         
+             // Check if the shipping method is a fixed cost or a percentage
+             let shippingCost = 0;
+             if (selectedShipping.hasAttribute('data-price')) {
+                 shippingCost = parseFloat(selectedShipping.getAttribute('data-price'));
+             } else if (selectedShipping.hasAttribute('data-percent')) {
+                 const percent = parseFloat(selectedShipping.getAttribute('data-percent'));
+                 shippingCost = subtotal * (percent / 100); // Calculate shipping as a percentage of the subtotal
+             }
+         
+             // Calculate the total (subtotal + shipping cost)
+             const total = subtotal + shippingCost;
+         
+             // Update the displayed total
+             document.getElementById('total').textContent = '₹' + total.toFixed(2);
+         }
+         
+         // Initialize the cart summary when the page loads
+         updateCartSummary();
+      </script>
+   </body>
+</html>
