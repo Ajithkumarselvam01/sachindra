@@ -1452,6 +1452,7 @@ section.product-banner {
 	background: none;
 	padding: 10px;
 	outline: none;
+	width: 200px;
 }
 
 .most-viewed h2 {
