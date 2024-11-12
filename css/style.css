@@ -2695,8 +2695,8 @@ section.Our-Company {
         display: none;
     }
 	section.subscribe {
-        padding: 10px 0px;
-        margin-top: -20px;
+        padding: 20px 0px;
+        margin-top: 0px;
     }
 
 	.footer-section {
@@ -2797,6 +2797,9 @@ section.Our-Company {
 	       .slide-track {
                 animation: scroll 10s linear infinite;
             }
+			.our-strength-sub-mob h3 {
+				padding: 10px 0;
+			}
 			.weight-options {
 				display: block;
 				gap: 0px;
@@ -3023,7 +3026,7 @@ section.Our-Company {
 	}
 
 	.gym-content h2 {
-		font-size: 20px;
+		font-size: 25px;
 	}
 
 	.gym-tab-mob {
@@ -3031,8 +3034,8 @@ section.Our-Company {
 	}
 
 	.gym-content p {
-		font-size: 20px;
-		text-align: justify;
+		font-size: 18px;
+		text-align: left;
 	}
 
 	.shop-button .shop-more {
@@ -3048,8 +3051,8 @@ section.Our-Company {
 	}
 
 	.Achievement-sub-1-mob p {
-		text-align: justify;
-		font-size: 16px;
+		text-align: left;
+		font-size: 15px;
 	}
 
 	.arrow-div-mob {
