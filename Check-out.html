@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Check Out</title>
+      <!-- Favicon -->
+      <link rel="icon" type="image/x-icon" href="Images/Sachindra-logu.png" />
+      <!-- Animate.css -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+      <!-- Font Awesome -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" 
+         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" 
+         crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <!-- Bootstrap CSS -->
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+      <!-- Owl Carousel CSS -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.0/assets/owl.carousel.min.css" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.0/assets/owl.theme.default.min.css" />
+      <!-- Google Fonts -->
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Oxygen:wght@300;400;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap" 
+         rel="stylesheet" />
+      <!-- Custom CSS -->
+      <link rel="stylesheet" type="text/css" href="./css/style.css" />
+   </head>
+   <style>
+      .Shopping-cart-sub, .Checkout-details-sub, .Order-complete-sub {
+      display: flex;
+      gap: 30px;
+      margin-bottom: 20px;
+      }
+      .Shopping-cart-sub h4,
+      .Checkout-details-sub h4,
+      .Order-complete-sub h4 {
+      padding: 7px 15px;
+      background: #3BC021; /* Sets the background color consistently */
+      border-radius: 50%;
+      color: #fff;
+      }
+      .Checkout-details-sub {
+      border-bottom: 3px solid #AB9235;
+      }
+      .Order-complete-sub h4{
+      background: #B1B5C3;
+      }
+      .Checkout-details-sub h4 {
+      background: #AB9235;
+      }
+      .Shopping-cart-sub h4 {
+      background: #3BC021;
+      }
+      .Shopping-cart-sub p,
+      .Checkout-details-sub p,
+      .Order-complete-sub p {
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Inter';
+      font-weight: 600;
+      margin-bottom: 5px;
+      }
+      .checout-h1-main-div {
+      display: flex;
+      justify-content: center;
+      gap: 80px;
+      margin-top: 30px;
+      }
+      img.product-image {
+      object-fit: none;
+      }
+      select#country {
+      border: 1px solid #ddd;
+      outline-color: #AB9235;
+      }
+      input#billing-address {
+      margin-bottom: 5px;
+      }
+      .Main-1-conact {
+      width: 60%;
+      }
+      .Main-2-conact {
+      width: 40%;
+      }
+      .form-section {
+      margin-bottom: 20px;
+      }
+      .form-section h2 {
+      font-size: 18px;
+      margin-bottom: 10px;
+      font-family: 'roboto';
+      font-weight: 500;
+      }
+      label {
+      display: block;
+      font-size: 14px;
+      margin-bottom: 5px;
+      }
+      input[type="text"], input[type="email"], input[type="tel"], select {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      outline-color: #AB9235;
+      }
+      .column {
+      flex: 1;
+      }
+      .checkbox-container {
+      margin-top: 10px;
+      display: flex;
+      gap: 20px;
+      }
+      .form-section {
+      margin-bottom: 20px;
+      border: 1px solid #6C7275;
+      padding: 20px;
+      border-radius: 10px;
+      }
+      .payment-container {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 300px;
+      }
+      .tabs {
+      display: flex;
+      margin-bottom: 20px;
+      }
+      .tab {
+      flex: 1;
+      padding: 10px;
+      text-align: center;
+      cursor: pointer;
+      border-bottom: 2px solid transparent;
+      }
+      .tab.active {
+      border-bottom: 2px solid #000;
+      font-weight: bold;
+      }
+      .form-group {
+      margin-bottom: 5px;
+      margin-top: 15px; 
+      }
+      .form-group label {
+      display: block;
+      margin-bottom: 5px;
+      color: #6C7275;
+      font-family: 'Roboto';
+      font-weight: 500;
+      margin-bottom: 10px;    }
+      .form-group input {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      }
+      .form-group input::placeholder {
+      color: #aaa;
+      }
+      .form-section lable {
+      color: #6C7275;
+      }
+      .payment-method-container {
+      padding: 20px;
+      border-radius: 8px;
+      border: 1px solid #6C7275;
+      }
+      .payment-method-container h2 {
+      font-size: 18px;
+      margin-bottom: 20px;
+      font-weight: 500;
+      }
+      .payment-option:hover {
+      outline: 2px solid #AB9235 !important;
+      }
+      .payment-option {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+      border: 1px solid #6C7275;
+      padding: 10px;
+      outline: #AB9235;
+      }
+      .payment-option input[type="radio"] {
+      margin-right: 10px;
+      }
+      .card-details {
+      margin-top: 10px;
+      }
+      .card-details label {
+      display: block;
+      font-size: 12px;
+      color: #555;
+      margin-bottom: 5px;
+      }
+      .card-details input[type="text"] {
+      width: 100%;
+      padding: 8px;
+      font-size: 14px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      }
+      .expiry-cvc {
+      display: flex;
+      gap: 10px;
+      }
+      .field {
+      flex: 1;
+      }
+      .field input[type="text"] {
+      width: 100%;
+      }
+      .payment-method-container input::placeholder{
+      color: #6C7275;
+      font-weight: 400;
+      }
+      .order-summary-container {
+      padding: 20px;
+      border: 1px solid #6C7275;
+      border-radius: 10px;
+      }
+      .order-summary-container h2 {
+      font-size: 25px;
+      margin-bottom: 20px;
+      font-family: 'Poppins';
+      font-weight: 500;
+      }
+      .order-item {
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid #eee;
+      padding: 10px 0;
+      }
+      .order-item img {
+      width: 100px;
+      height: 100px;
+      margin-right: 15px;
+      border-radius: 8px;
+      }
+      .item-details {
+      flex: 1;
+      }
+      .item-details h3 {
+      font-size: 15px;
+      margin: 0;
+      font-family: 'Inter';
+      font-weight: 500;
+      }
+      .item-details p {
+      font-size: 14px;
+      color: #777;
+      margin: 5px 0;
+      font-family: 'Inter';
+      font-weight: 400;
+      }
+      .item-quantity {
+      display: flex;
+      align-items: center;
+      }
+      .item-quantity {
+      display: flex;
+      align-items: center;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      overflow: hidden;
+      width: fit-content;
+      }
+      .quantity-btn {
+      width: 32px;
+      height: 32px;
+      font-size: 18px;
+      font-weight: bold;
+      border: none;
+      color: #333;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background-color 0.2s ease;
+      }
+      .quantity {
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      font-weight: 500;
+      color: #333;
+      background-color: #fff;
+      }
+      .item-price {
+      font-size: 14px;
+      color: #121212;
+      font-family: 'Inter';
+      font-weight: 600;
+      }
+      .summary-line span {
+      font-family: 'Inter';
+      font-weight: 400;
+      color: #141718;
+      }
+      .summary-total span {
+      font-family: 'Poppins';
+      font-weight: 500;
+      }
+      .summary-line {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 0;
+      font-size: 14px;
+      color: #555;
+      border-bottom: 1px solid #E8ECEF;
+      }
+      .place-order-btn {
+      padding: 10px;
+      text-align: center;
+      background: #AB9235;
+      margin-top: 10px;
+      border-radius: 10px;
+      }
+      .place-order-btn a {
+      color: #fff;
+      font-size: 20px;
+      font-family: 'Inter';
+      font-weight: 500;
+      }
+      .check-h1-section h1 {
+      text-align: center;
+      font-weight: 500;
+      }
+      .summary-total {
+      display: flex;
+      justify-content: space-between;
+      font-size: 18px;
+      font-weight: bold;
+      padding: 10px 0;
+      }
+      .check-1-main {
+      display: flex;
+      gap: 20px;
+      }
+      @media only screen and (max-width: 1024px) {
+      .check-1-main {
+      gap: 20px;
+      display: block;
+      }
+      .Main-1-conact {
+      width: 100%;
+      margin-bottom: 20px;
+      }
+      .Main-2-conact {
+      width: 100%;
+      }
+      .checout-h1-main-div {
+      gap: 30px;
+      }
+      }
+      @media only screen and (max-width: 600px) {
+      .form-section .row {
+      display: block;
+      }
+      .expiry-cvc {
+      display: block;
+      }
+      .order-item {
+      display: block;
+      text-align: center;
+      }
+      .checout-h1-main-div {
+        display: block;
+    }      .Checkout-details-sub {
+      border-bottom: none;
+      }
+
+      }
+      @media only screen and (max-width: 768px) {
+      .item-quantity {
+      justify-content: center;
+      width: 50%;
+      padding: 5px;
+      transform: translateX(50%);
+      }
+
+      .checout-h1-main-div {
+        gap: 10px;
+    }
+ 
+        section.check-h1-section {
+        padding: 30px;
+    }
+      }
+   </style>
+   <body>
+      <header>
+         <!-- NAV_BAR_SECTION START -->
+         <nav>
+            <input type="checkbox" id="nav-toggle" />
+            <div class="logo">
+               <a href="">
+               <img src="Images/Sachindra-logu.png" alt="AFMS-Logo" title="AFMS-Logo" />
+               </a>
+            </div>
+            <ul class="links">
+               <li><a href="#">About Us</a></li>
+               <li><a href="#about">Our Products</a></li>
+               <li><a href="#work">Custom Rubber Solutions</a></li>
+               <li><a href="#">Login / Signup</a></li>
+               <li>
+                  <a href="#"><img class="icon" src="Images/user-logu.png" alt="User Icon" title="User Icon" /></a>
+               </li>
+               <li>
+                  <a href="#"><img class="icon" src="Images/Cart-logu.png" alt="Cart Icon" title="Cart Icon" /></a>
+               </li>
+               <li>
+                  <a href="#"><img class="icon" src="Images/Search-logu.png" alt="Search Icon" title="Search Icon" /></a>
+               </li>
+            </ul>
+            <label for="nav-toggle" class="icon-burger">
+               <div class="line"></div>
+               <div class="line"></div>
+               <div class="line"></div>
+            </label>
+         </nav>
+         <!-- NAV_BAR_SECTION END -->
+      </header>
+      <section class="check-h1-section">
+         <div class="container">
+            <h1>Check Out</h1>
+            <div class="checout-h1-main-div">
+               <div class="Shopping-cart-sub">
+                  <h4>1</h4>
+                  <p>Shopping cart</p>
+               </div>
+               <div class="Checkout-details-sub">
+                  <h4>2</h4>
+                  <p>Checkout details</p>
+               </div>
+               <div class="Order-complete-sub">
+                  <h4>3</h4>
+                  <p>Order complete</p>
+               </div>
+            </div>
+         </div>
+      </section>
+      <section class="Check-out-1">
+         <div class="container">
+            <div class="check-1-main">
+               <div class="Main-1-conact">
+                  <div class="form-container-check">
+                     <div class="form-section">
+                        <h2>Contact Information</h2>
+                        <div class="first-cont-che row">
+                           <div class="form-group frst-name col-lg-6">
+                              <label for="first-name">First Name</label>
+                              <input type="text" id="first-name" name="first-name" placeholder="First name">
+                           </div>
+                           <div class="form-group last-name col-lg-6">
+                              <label for="last-name">Last Name</label>
+                              <input type="text" id="last-name" name="last-name" placeholder="Last name">
+                           </div>
+                        </div>
+                        <div class="form-group">
+                           <label for="phone-number">Phone Number</label>
+                           <input type="tel" id="phone-number" name="phone-number" placeholder="Phone number">
+                        </div>
+                        <div class="form-group">
+                           <label for="email">Email Address</label>
+                           <input type="email" id="email" name="email" placeholder="Your Email">
+                        </div>
+                     </div>
+                     <div class="form-section">
+                        <h2>Shipping Address</h2>
+                        <div class="form-group">
+                           <label for="street-address">Street Address *</label>
+                           <input type="text" id="street-address" name="street-address" placeholder="Street Address">
+                        </div>
+                        <div class="form-group">
+                           <label for="country">Country *</label>
+                           <select id="country" name="country">
+                              <option value="">Country</option>
+                              <option value="Afghanistan">Afghanistan</option>
+                              <option value="Albania">Albania</option>
+                              <option value="Algeria">Algeria</option>
+                              <option value="Andorra">Andorra</option>
+                              <option value="Angola">Angola</option>
+                              <option value="Antigua and Barbuda">Antigua and Barbuda</option>
+                              <option value="Argentina">Argentina</option>
+                              <option value="Armenia">Armenia</option>
+                              <option value="Australia">Australia</option>
+                              <option value="Austria">Austria</option>
+                              <option value="Azerbaijan">Azerbaijan</option>
+                              <option value="Bahamas">Bahamas</option>
+                              <option value="Bahrain">Bahrain</option>
+                              <option value="Bangladesh">Bangladesh</option>
+                              <option value="Barbados">Barbados</option>
+                              <option value="Belarus">Belarus</option>
+                              <option value="Belgium">Belgium</option>
+                              <option value="Belize">Belize</option>
+                              <option value="Benin">Benin</option>
+                              <option value="Bhutan">Bhutan</option>
+                              <option value="Bolivia">Bolivia</option>
+                              <option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
+                              <option value="Botswana">Botswana</option>
+                              <option value="Brazil">Brazil</option>
+                              <option value="Brunei">Brunei</option>
+                              <option value="Bulgaria">Bulgaria</option>
+                              <option value="Burkina Faso">Burkina Faso</option>
+                              <option value="Burundi">Burundi</option>
+                              <option value="Cabo Verde">Cabo Verde</option>
+                              <option value="Cambodia">Cambodia</option>
+                              <option value="Cameroon">Cameroon</option>
+                              <option value="Canada">Canada</option>
+                              <option value="Central African Republic">Central African Republic</option>
+                              <option value="Chad">Chad</option>
+                              <option value="Chile">Chile</option>
+                              <option value="China">China</option>
+                              <option value="Colombia">Colombia</option>
+                              <option value="Comoros">Comoros</option>
+                              <option value="Congo (Congo-Brazzaville)">Congo (Congo-Brazzaville)</option>
+                              <option value="Costa Rica">Costa Rica</option>
+                              <option value="Croatia">Croatia</option>
+                              <option value="Cuba">Cuba</option>
+                              <option value="Cyprus">Cyprus</option>
+                              <option value="Czechia (Czech Republic)">Czechia (Czech Republic)</option>
+                              <option value="Democratic Republic of the Congo">Democratic Republic of the Congo</option>
+                              <option value="Denmark">Denmark</option>
+                              <option value="Djibouti">Djibouti</option>
+                              <option value="Dominica">Dominica</option>
+                              <option value="Dominican Republic">Dominican Republic</option>
+                              <option value="Ecuador">Ecuador</option>
+                              <option value="Egypt">Egypt</option>
+                              <option value="El Salvador">El Salvador</option>
+                              <option value="Equatorial Guinea">Equatorial Guinea</option>
+                              <option value="Eritrea">Eritrea</option>
+                              <option value="Estonia">Estonia</option>
+                              <option value="Eswatini (fmr. Swaziland)">Eswatini (fmr. Swaziland)</option>
+                              <option value="Ethiopia">Ethiopia</option>
+                              <option value="Fiji">Fiji</option>
+                              <option value="Finland">Finland</option>
+                              <option value="France">France</option>
+                              <option value="Gabon">Gabon</option>
+                              <option value="Gambia">Gambia</option>
+                              <option value="Georgia">Georgia</option>
+                              <option value="Germany">Germany</option>
+                              <option value="Ghana">Ghana</option>
+                              <option value="Greece">Greece</option>
+                              <option value="Grenada">Grenada</option>
+                              <option value="Guatemala">Guatemala</option>
+                              <option value="Guinea">Guinea</option>
+                              <option value="Guinea-Bissau">Guinea-Bissau</option>
+                              <option value="Guyana">Guyana</option>
+                              <option value="Haiti">Haiti</option>
+                              <option value="Honduras">Honduras</option>
+                              <option value="Hungary">Hungary</option>
+                              <option value="Iceland">Iceland</option>
+                              <option value="India">India</option>
+                              <option value="Indonesia">Indonesia</option>
+                              <option value="Iran">Iran</option>
+                              <option value="Iraq">Iraq</option>
+                              <option value="Ireland">Ireland</option>
+                              <option value="Israel">Israel</option>
+                              <option value="Italy">Italy</option>
+                              <option value="Jamaica">Jamaica</option>
+                              <option value="Japan">Japan</option>
+                              <option value="Jordan">Jordan</option>
+                              <option value="Kazakhstan">Kazakhstan</option>
+                              <option value="Kenya">Kenya</option>
+                              <option value="Kiribati">Kiribati</option>
+                              <option value="Korea, North">Korea, North</option>
+                              <option value="Korea, South">Korea, South</option>
+                              <option value="Kuwait">Kuwait</option>
+                              <option value="Kyrgyzstan">Kyrgyzstan</option>
+                              <option value="Laos">Laos</option>
+                              <option value="Latvia">Latvia</option>
+                              <option value="Lebanon">Lebanon</option>
+                              <option value="Lesotho">Lesotho</option>
+                              <option value="Liberia">Liberia</option>
+                              <option value="Libya">Libya</option>
+                              <option value="Liechtenstein">Liechtenstein</option>
+                              <option value="Lithuania">Lithuania</option>
+                              <option value="Luxembourg">Luxembourg</option>
+                              <option value="Madagascar">Madagascar</option>
+                              <option value="Malawi">Malawi</option>
+                              <option value="Malaysia">Malaysia</option>
+                              <option value="Maldives">Maldives</option>
+                              <option value="Mali">Mali</option>
+                              <option value="Malta">Malta</option>
+                              <option value="Marshall Islands">Marshall Islands</option>
+                              <option value="Mauritania">Mauritania</option>
+                              <option value="Mauritius">Mauritius</option>
+                              <option value="Mexico">Mexico</option>
+                              <option value="Micronesia">Micronesia</option>
+                              <option value="Moldova">Moldova</option>
+                              <option value="Monaco">Monaco</option>
+                              <option value="Mongolia">Mongolia</option>
+                              <option value="Montenegro">Montenegro</option>
+                              <option value="Morocco">Morocco</option>
+                              <option value="Mozambique">Mozambique</option>
+                              <option value="Myanmar (formerly Burma)">Myanmar (formerly Burma)</option>
+                              <option value="Namibia">Namibia</option>
+                              <option value="Nauru">Nauru</option>
+                              <option value="Nepal">Nepal</option>
+                              <option value="Netherlands">Netherlands</option>
+                              <option value="New Zealand">New Zealand</option>
+                              <option value="Nicaragua">Nicaragua</option>
+                              <option value="Niger">Niger</option>
+                              <option value="Nigeria">Nigeria</option>
+                              <option value="North Macedonia">North Macedonia</option>
+                              <option value="Norway">Norway</option>
+                              <option value="Oman">Oman</option>
+                              <option value="Pakistan">Pakistan</option>
+                              <option value="Palau">Palau</option>
+                              <option value="Palestine">Palestine</option>
+                              <option value="Panama">Panama</option>
+                              <option value="Papua New Guinea">Papua New Guinea</option>
+                              <option value="Paraguay">Paraguay</option>
+                              <option value="Peru">Peru</option>
+                              <option value="Philippines">Philippines</option>
+                              <option value="Poland">Poland</option>
+                              <option value="Portugal">Portugal</option>
+                              <option value="Qatar">Qatar</option>
+                              <option value="Romania">Romania</option>
+                              <option value="Russia">Russia</option>
+                              <option value="Rwanda">Rwanda</option>
+                              <option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option>
+                              <option value="Saint Lucia">Saint Lucia</option>
+                              <option value="Saint Vincent and the Grenadines">Saint Vincent and the Grenadines</option>
+                              <option value="Samoa">Samoa</option>
+                              <option value="San Marino">San Marino</option>
+                              <option value="Sao Tome and Principe">Sao Tome and Principe</option>
+                              <option value="Saudi Arabia">Saudi Arabia</option>
+                              <option value="Senegal">Senegal</option>
+                              <option value="Serbia">Serbia</option>
+                              <option value="Seychelles">Seychelles</option>
+                              <option value="Sierra Leone">Sierra Leone</option>
+                              <option value="Singapore">Singapore</option>
+                              <option value="Slovakia">Slovakia</option>
+                              <option value="Slovenia">Slovenia</option>
+                              <option value="Solomon Islands">Solomon Islands</option>
+                              <option value="Somalia">Somalia</option>
+                              <option value="South Africa">South Africa</option>
+                              <option value="South Sudan">South Sudan</option>
+                              <option value="Spain">Spain</option>
+                              <option value="Sri Lanka">Sri Lanka</option>
+                              <option value="Sudan">Sudan</option>
+                              <option value="Suriname">Suriname</option>
+                              <option value="Sweden">Sweden</option>
+                              <option value="Switzerland">Switzerland</option>
+                              <option value="Syria">Syria</option>
+                              <option value="Taiwan">Taiwan</option>
+                              <option value="Tajikistan">Tajikistan</option>
+                              <option value="Tanzania">Tanzania</option>
+                              <option value="Thailand">Thailand</option>
+                              <option value="Timor-Leste">Timor-Leste</option>
+                              <option value="Togo">Togo</option>
+                              <option value="Tonga">Tonga</option>
+                              <option value="Trinidad and Tobago">Trinidad and Tobago</option>
+                              <option value="Tunisia">Tunisia</option>
+                              <option value="Turkey">Turkey</option>
+                              <option value="Turkmenistan">Turkmenistan</option>
+                              <option value="Tuvalu">Tuvalu</option>
+                              <option value="Uganda">Uganda</option>
+                              <option value="Ukraine">Ukraine</option>
+                              <option value="United Arab Emirates">United Arab Emirates</option>
+                              <option value="United Kingdom">United Kingdom</option>
+                              <option value="United States">United States</option>
+                              <option value="Uruguay">Uruguay</option>
+                              <option value="Uzbekistan">Uzbekistan</option>
+                              <option value="Vanuatu">Vanuatu</option>
+                              <option value="Vatican City">Vatican City</option>
+                              <option value="Venezuela">Venezuela</option>
+                              <option value="Vietnam">Vietnam</option>
+                              <option value="Yemen">Yemen</option>
+                              <option value="Zambia">Zambia</option>
+                              <option value="Zimbabwe">Zimbabwe</option>
+                           </select>
+                        </div>
+                        <div class="form-group">
+                           <label for="city">Town / City *</label>
+                           <input type="text" id="city" name="city" placeholder="Town / City">
+                        </div>
+                        <div class="row">
+                           <div class="column form-group">
+                              <label for="state">State</label>
+                              <input type="text" id="state" name="state" placeholder="State">
+                           </div>
+                           <div class="column form-group">
+                              <label for="zip-code">Zip Code</label>
+                              <input type="text" id="zip-code" name="zip-code" placeholder="Zip Code">
+                           </div>
+                        </div>
+                        <div class="checkbox-container">
+                           <input type="checkbox" class="check-usre" id="billing-address" name="billing-address">
+                           <label for="billing-address">Use a different billing address (optional)</label>
+                        </div>
+                     </div>
+                     <div class="payment-method-container">
+                        <h2>Payment method</h2>
+                        <div class="payment-option">
+                           <input type="radio" id="card" name="paymentMethod" value="card" checked>
+                           <label for="card">Pay by Credit Card </label>
+                        </div>
+                        <div class="payment-option">
+                           <input type="radio" id="upi" name="paymentMethod" value="upi">
+                           <label for="upi">Pay by UPI</label>
+                        </div>
+                        <div class="card-details">
+                           <label for="cardNumber">CARD NUMBER</label>
+                           <input type="text" id="cardNumber" placeholder="1234 1234 1234" maxlength="19">
+                           <div class="expiry-cvc">
+                              <div class="field">
+                                 <label for="expiryDate">EXPIRATION DATE</label>
+                                 <input type="text" id="expiryDate" placeholder="MM/YY" maxlength="5">
+                              </div>
+                              <div class="field">
+                                 <label for="cvc">CVC</label>
+                                 <input type="text" id="cvc" placeholder="CVC code" maxlength="3">
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="place-order-btn">
+                        <a href="#">Place Order</a>
+                     </div>
+                  </div>
+               </div>
+               <div class="Main-2-conact">
+                  <div class="order-summary-container">
+                     <h2>Order summary</h2>
+                     <div class="order-item">
+                        <img src="Images/small-icon-3.png" alt="Weight plate">
+                        <div class="item-details">
+                           <h3>Weight plate</h3>
+                           <p>Weight: 5kg</p>
+                           <div class="item-quantity">
+                              <button class="quantity-btn" onclick="updateQuantity(this, 'decrement')">−</button>
+                              <span class="quantity">2</span>
+                              <button class="quantity-btn" onclick="updateQuantity(this, 'increment')">+</button>
+                           </div>
+                        </div>
+                        <span class="item-price">₹38.00</span>
+                     </div>
+                     <div class="order-item">
+                        <img src="Images/small-icon-1.png" alt="Rubber flexit">
+                        <div class="item-details">
+                           <h3>Rubber flexit</h3>
+                           <p>Weight: 5kg</p>
+                           <div class="item-quantity">
+                              <button class="quantity-btn" onclick="updateQuantity(this, 'decrement')">−</button>
+                              <span class="quantity">2</span>
+                              <button class="quantity-btn" onclick="updateQuantity(this, 'increment')">+</button>
+                           </div>
+                        </div>
+                        <span class="item-price">₹38.00</span>
+                     </div>
+                     <div class="order-item">
+                        <img src="Images/Paste image.png" alt="Silicon diaphragm">
+                        <div class="item-details">
+                           <h3>Silicon diaphragm</h3>
+                           <p>Weight: 5kg</p>
+                           <div class="item-quantity">
+                              <button class="quantity-btn" onclick="updateQuantity(this, 'decrement')">−</button>
+                              <span class="quantity">2</span>
+                              <button class="quantity-btn" onclick="updateQuantity(this, 'increment')">+</button>
+                           </div>
+                        </div>
+                        <span class="item-price">₹39.00</span>
+                     </div>
+                     <div class="summary-line">
+                        <span>Shipping</span>
+                        <span>Free</span>
+                     </div>
+                     <div class="summary-line">
+                        <span>Subtotal</span>
+                        <span>$99.00</span>
+                     </div>
+                     <div class="summary-total">
+                        <span>Total</span>
+                        <span>₹234.00</span>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- Subscribe section start -->
+      <section class="subscribe">
+         <div class="container">
+            <div class="main-subs" style="background-image: url(Images/Sub-button.png);">
+               <div class="Subs-sub">
+                  <h2>Newsletter </h2>
+                  <p>Sign Up for Newsletter
+                     We’ll be with you on every walk of life on how to identify new opportunities.
+                  </p>
+               </div>
+               <div class="Subs-sub">
+                  <div class="subscribe-container">
+                     <input type="email" class="subscribe-input" placeholder="Your email address" />
+                     <button class="subscribe-button">Subscribe</button>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- Subscribe section end -->
+      <!-- footer section -->
+      <footer class="footer-section">
+         <div class="container footer-container ">
+            <div class="footer-content">
+               <div class="footer-row">
+                  <div class="footer-column footer-1">
+                     <div class="footer-widget">
+                        <div class="footer-logo">
+                           <a href="index.html">
+                           <img src="Images/Sachindra-logu.png" class="img-footer" alt="Sachindra" title="Sachindra" />
+                           </a>
+                        </div>
+                        <div class="footer-text">
+                           <p>
+                              RubberPlus is a leading manufacturer of high-quality rubber products, committed to delivering exceptional solutions across multiple industries. With a focus on innovation, durability, and customer satisfaction, we provide custom rubber components that meet the highest standards of performance and reliability.
+                           </p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="footer-column footer-2">
+                     <div class="footer-widget">
+                        <h3 class="footer-heading">Quick Links</h3>
+                        <ul class="quick-links">
+                           <li><a href="#">Home</a></li>
+                           <li><a href="#">About</a></li>
+                           <li><a href="#">Products</a></li>
+                           <li><a href="#">Achievements & Certifications</a></li>
+                           <li><a href="#">Testimonials</a></li>
+                           <li><a href="#">Contact</a></li>
+                        </ul>
+                     </div>
+                  </div>
+                  <div class="footer-column footer-3">
+                     <div class="footer-widget">
+                        <h3 class="footer-heading">Contact Us</h3>
+                        <div class="footer-location">
+                           <img src="Images/footer-icon-1.png" alt="" />
+                           <p>
+                              +91-9447 76 0215 | +91-8606 05 2220 <br />
+                              +91-8606 05 2221 
+                           </p>
+                        </div>
+                        <div class="footer-phone">
+                           <img src="Images/footer-icon-2.png" alt="" />
+                           <p>
+                              contact@rubberplus.in / <br />
+                              adarshpj@rubberplus.in
+                           </p>
+                        </div>
+                        <div class="footer-email">
+                           <img src="Images/footer-icon-3.png" alt="" />
+                           <p>Sachindra Rubber Plus LLP Vallivattom, Thrissur Kerala - 680 123</p>
+                        </div>
+                        <div class="social-icons">
+                           <a href="https://instagram.com" target="_blank">
+                           <img src="Images/instagram-icon.png" alt="Instagram" title="Instagram" />
+                           </a>
+                           <a href="https://twitter.com" target="_blank">
+                           <img src="Images/X-icon.png" alt="X" title="X" />
+                           </a>
+                           <a href="https://facebook.com" target="_blank">
+                           <img src="Images/Facebook-icon.png" alt="Facebook" title="Facebook" />
+                           </a>
+                           <a href="https://linkedin.com" target="_blank">
+                           <img src="Images/Linkedin-icon.png" alt="Linkedin" title="Linkedin" />
+                           </a>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="footer-column footer-4">
+                     <div class="footer-widget">
+                        <div class="form-container">
+                           <h2>Request a Quote Today!</h2>
+                           <form action="#" method="POST" id="contactForm">
+                              <div class="form-group">
+                                 <input type="text" id="name" name="name" required placeholder="Name" />
+                              </div>
+                              <div class="form-group">
+                                 <input type="tel" id="phone" name="phone" required placeholder="Phone number" pattern="[0-9]{10}" title="Please enter a 10-digit phone number" />
+                              </div>
+                              <div class="form-group">
+                                 <input type="email" id="email" name="email" required placeholder="Email" />
+                              </div>
+                              <div class="form-group">
+                                 <select id="product" name="product" required>
+                                    <option value="">Products & Solutions</option>
+                                    <option value="product1">Product 1</option>
+                                    <option value="product2">Product 2</option>
+                                    <option value="solution1">Solution 1</option>
+                                    <option value="solution2">Solution 2</option>
+                                 </select>
+                              </div>
+                              <div class="form-group">
+                                 <textarea id="message" name="message" rows="1" required placeholder="Message"></textarea>
+                              </div>
+                              <button type="submit" class="submit-button">Submit</button>
+                           </form>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </footer>
+      <div class="copyright-section">
+         <p>Copyright @ 2024. Sachindra Rubber Plus LLP</p>
+      </div>
+      <script>
+         const filterInput = document.getElementById('filter');
+         const countrySelect = document.getElementById('country');
+         
+         filterInput.addEventListener('input', function() {
+             const filterValue = filterInput.value.toLowerCase();
+             const options = countrySelect.options;
+         
+             for (let i = 0; i < options.length; i++) {
+                 const optionText = options[i].text.toLowerCase();
+                 options[i].style.display = optionText.includes(filterValue) ? '' : 'none';
+             }
+         });
+      </script>
+      <script></script>
+      <script>
+         document.addEventListener('DOMContentLoaded', function() {
+         const cardOption = document.getElementById('card');
+         const upiOption = document.getElementById('upi');
+         const cardDetails = document.querySelector('.card-details');
+         
+         cardOption.addEventListener('change', togglePaymentDetails);
+         upiOption.addEventListener('change', togglePaymentDetails);
+         
+         function togglePaymentDetails() {
+         if (cardOption.checked) {
+         cardDetails.style.display = 'block';
+         } else {
+         cardDetails.style.display = 'none';
+         }
+         }
+         
+         togglePaymentDetails(); // Initialize the visibility based on default selection
+         });
+         
+      </script>
+      <script>
+         function updateQuantity(button, action) {
+         const quantitySpan = button.parentElement.querySelector('.quantity');
+         let quantity = parseInt(quantitySpan.textContent);
+         
+         if (action === 'increment') {
+         quantity++;
+         } else if (action === 'decrement' && quantity > 1) {
+         quantity--;
+         }
+         
+         quantitySpan.textContent = quantity;
+         // Optionally update total here if needed
+         }
+         
+      </script>
+      <script type="text/javascript" src="js/jquery.min.js"></script>
+      <script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
+      <script type="text/javascript" src="js/owl.carousel.min.js"></script>
+      <script type="text/javascript" src="js/script.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.2/js/bootstrap.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.0/owl.carousel.min.js"></script>
+      <!-- Bootstrap JS -->
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+   </body>
+</html>
