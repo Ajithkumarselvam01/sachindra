@@ -197,7 +197,7 @@ nav .links li {
 nav .links a:not(:has(img)) {
 	display: block;
 	padding: 10px;
-	font-size: 18px;
+	font-size: 16px;
 	font-weight: 500;
 	color: #1b1b1b;
 	text-decoration: none;
@@ -909,11 +909,14 @@ section.subscribe {
 	position: relative;
 	padding:30px;
 }
+.cate li {
+    text-align: left;
+}
 section.our-collection {
     padding: 0 50px;
 }d
 .footer-container {
-	width: 80%;
+	width: 90%;
 	max-width: 1300px;
 	margin: auto;
 }
@@ -2293,14 +2296,12 @@ section.Our-Company {
 	.product-main-div {
 		display: block;
 	}
-	.product-cart-list-sub {
-		width: 100%;
-	}
+
 	.cart-summery-1 {
-		width: 100%;
+		width: 100% !important;
 	}
 	.product-cart-list-sub {
-		width: 100%;
+		width: 100% !important;
 		overflow: scroll;
 	}
 	nav {
