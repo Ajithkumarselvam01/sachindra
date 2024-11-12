@@ -29,6 +29,66 @@
       img.product-image {
       object-fit: none;
       }
+      .Shopping-cart-sub, .Checkout-details-sub, .Order-complete-sub {
+      display: flex;
+      gap: 30px;
+      margin-bottom: 20px;
+      }
+      .Shopping-cart-sub h4,
+      .Checkout-details-sub h4,
+      .Order-complete-sub h4 {
+      padding: 7px 15px;
+      background: #B1B5C3; /* Sets the background color consistently */
+      border-radius: 50%;
+      color: #fff;
+      }
+      .Shopping-cart-sub {
+      border-bottom: 3px solid #AB9235;
+      }
+      .Shopping-cart-sub h4{
+      background: #AB9235;
+      }
+      .Checkout-details-sub h4 {
+      background: #B1B5C3;
+      }
+     
+      .Shopping-cart-sub h4 {
+         background: #AB9235;
+      }
+      .Order-complete-sub p {
+      color: #000;
+      }
+      .com-1 p {
+        transform: translate(175px, -225px);
+        width: 50px;
+        height: 50px;
+        background: #AB9235;
+        color: #fff;
+        border-radius: 50%;
+        padding: 10px;
+    }
+      .Shopping-cart-sub p,
+      .Checkout-details-sub p,
+      .Order-complete-sub p {
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Inter';
+      font-weight: 600;
+      margin-bottom: 5px;
+      color: #B1B5C3;
+      
+      }
+      .Shopping-cart-sub p {
+    color: #000;
+}
+      .checout-h1-main-div {
+      display: flex;
+      justify-content: center;
+      gap: 80px;
+      margin-top: 30px;
+      }
       .product-cart-list-sub {
       width: 70%;
       }
@@ -175,6 +235,9 @@
       border-color: #b89d45;
       background-color: #f9f6f0;
       }
+      .check-h1-section h1 {
+         text-align: center;
+      }
       .cart-summary .subtotal, .cart-summary .total {
       display: flex;
       justify-content: space-between;
@@ -210,7 +273,14 @@
       .shipping-option input[type="radio"]:checked + span + span {
         color: #AB9235;
       }
-      
+      @media (max-width: 800px) {
+         .checout-h1-main-div {
+         display: block;
+      }
+      .Shopping-cart-sub {
+      border-bottom: none;
+   }
+      }
 
       @media (max-width: 768px) {
       .cart-main {
@@ -251,23 +321,21 @@
          </nav>
          <!-- NAV_BAR_SECTION END -->
       </header>
-      <section class="cart-1-sec">
+      <section class="check-h1-section">
          <div class="container">
-            <div class="div-1">
-               <h1>Cart</h1>
-               <div class="cart-main row">
-                  <div class="Active-page active col-lg-4">
-                     <h4>1</h4>
-                     <p>Shopping cart</p>
-                  </div>
-                  <div class="Active-page col-lg-4">
-                     <h4>2</h4>
-                     <p>Checkout details</p>
-                  </div>
-                  <div class="Active-page col-lg-4">
-                     <h4>3</h4>
-                     <p>Order complete</p>
-                  </div>
+            <h1>Cart</h1>
+            <div class="checout-h1-main-div">
+               <div class="Shopping-cart-sub">
+                  <h4>1</h4>
+                  <p>Shopping cart</p>
+               </div>
+               <div class="Checkout-details-sub">
+                  <h4>2</h4>
+                  <p>Checkout details</p>
+               </div>
+               <div class="Order-complete-sub">
+                  <h4>3</h4>
+                  <p>Order complete</p>
                </div>
             </div>
          </div>
