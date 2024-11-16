@@ -34,6 +34,9 @@
       gap: 30px;
       margin-bottom: 20px;
       }
+      .product-container-mob {
+      display: none !important;
+      }
       .Shopping-cart-sub h4,
       .Checkout-details-sub h4,
       .Order-complete-sub h4 {
@@ -51,22 +54,21 @@
       .Checkout-details-sub h4 {
       background: #B1B5C3;
       }
-     
       .Shopping-cart-sub h4 {
-         background: #AB9235;
+      background: #AB9235;
       }
       .Order-complete-sub p {
       color: #000;
       }
       .com-1 p {
-        transform: translate(175px, -225px);
-        width: 50px;
-        height: 50px;
-        background: #AB9235;
-        color: #fff;
-        border-radius: 50%;
-        padding: 10px;
-    }
+      transform: translate(175px, -225px);
+      width: 50px;
+      height: 50px;
+      background: #AB9235;
+      color: #fff;
+      border-radius: 50%;
+      padding: 10px;
+      }
       .Shopping-cart-sub p,
       .Checkout-details-sub p,
       .Order-complete-sub p {
@@ -78,11 +80,10 @@
       font-weight: 600;
       margin-bottom: 5px;
       color: #B1B5C3;
-      
       }
       .Shopping-cart-sub p {
-    color: #000;
-}
+      color: #000;
+      }
       .checout-h1-main-div {
       display: flex;
       justify-content: center;
@@ -148,7 +149,6 @@
       max-width: 800px;
       margin: 20px auto;
       border-collapse: collapse;
-
       color: #333;
       }
       /* Table styling */
@@ -212,9 +212,9 @@
       color: #333;
       box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
       }
-         .product-name span {
+      .product-name span {
       font-weight: 500;
-   }
+      }
       .cart-summary h2 {
       font-size: 18px;
       margin-bottom: 15px;
@@ -239,7 +239,7 @@
       background-color: #f9f6f0;
       }
       .check-h1-section h1 {
-         text-align: center;
+      text-align: center;
       }
       .cart-summary .subtotal, .cart-summary .total {
       display: flex;
@@ -249,13 +249,13 @@
       font-size: 16px;
       padding:10px;
       }
-         .cart-1-sec {
+      .cart-1-sec {
       text-align: center;
       margin: 0px 0;
-   }
+      }
       section.product-list-cart {
       padding-top: 30px;
-   }
+      }
       /* Checkout button styling */
       .checkout-btn {
       display: block;
@@ -276,25 +276,100 @@
       .cart-summery-1 {
       width: 30%;
       }
-      /* General styles */
-
+      .product-container-mob {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      align-items: center;
+      padding: 16px;
+      }
+      .product-card-mob {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #fff;
+      width: 100%;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      padding: 16px;
+      margin-bottom: 20px;
+      gap: 30px;
+      }
+      .product-image-mob img {
+      width: 80px;
+      height: auto;
+      border-radius: 4px;
+      margin-right: 16px;
+      }
+      .product-details-mob {
+      flex: 1;
+      }
+      .product-name-mob span:first-child {
+      display: block;
+      font-size: 16px;
+      font-weight: bold;
+      color: #333;
+      }
+      .product-name-mob span:nth-child(2) {
+      display: block;
+      font-size: 14px;
+      color: #666;
+      margin-top: 4px;
+      }
+      .product-name-mob span:nth-child(3) {
+      display: block;
+      font-size: 16px;
+      font-weight: bold;
+      color: #000;
+      margin-top: 8px;
+      }
+      .remove-mob {
+      display: block;
+      font-size: 12px;
+      color: #ff5252;
+      margin-top: 8px;
+      cursor: pointer;
+      }
+      .quantity-mob {
+      display: flex;
+      align-items: center;
+      margin-top: 8px;
+      }
+      .quantity-mob label {
+      font-size: 14px;
+      margin-right: 8px;
+      color: #333;
+      }
+      .quantity-mob select {
+      padding: 4px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 14px;
+      background-color: #fff;
+      }
       /* Change color of selected option */
       .shipping-option input[type="radio"]:checked + span,
       .shipping-option input[type="radio"]:checked + span + span {
-        color: #AB9235;
+      color: #AB9235;
       }
       @media (max-width: 800px) {
-         .checout-h1-main-div {
-         display: block;
+      .checout-h1-main-div {
+      display: block;
       }
       .Shopping-cart-sub {
       border-bottom: none;
-   }
       }
-
+      }
       @media (max-width: 768px) {
       .cart-main {
       flex-direction: column;
+      }
+      .product-cart-list-sub {
+      display: none;
+      }
+      .product-container-mob {
+      display: block !important;
       }
       }
    </style>
@@ -432,6 +507,80 @@
                         </tr>
                      </tbody>
                   </table>
+               </div>
+               <div class="product-container-mob">
+                  <!-- Product 1 -->
+                  <div class="product-card-mob">
+                     <div class="product-image-mob">
+                        <img src="Images/Paste image.png" alt="Weight Plate">
+                     </div>
+                     <div class="product-details-mob">
+                        <div class="product-name-mob">
+                           <span>Weight Plate</span>
+                           <span>Weight: 5kg</span>
+                           <span>₹19.00</span>
+                           <span class="remove-mob"  style="color: #6C7275;" onclick="removeItem(this)"> <i class="fa fa-times" aria-hidden="true"></i>Remove</span>
+                        </div>
+                        <div class="quantity-mob">
+                           <label for="quantity-mob-1">Qty:</label>
+                           <select id="quantity-mob-1" name="quantity" onchange="updatePrice(this)">
+                              <option value="1" selected>1</option>
+                              <option value="2">2</option>
+                              <option value="3">3</option>
+                              <option value="4">4</option>
+                              <option value="5">5</option>
+                           </select>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- Product 2 -->
+                  <div class="product-card-mob">
+                     <div class="product-image-mob">
+                        <img src="Images/small-icon-1.png" alt="Weight Plate">
+                     </div>
+                     <div class="product-details-mob">
+                        <div class="product-name-mob">
+                           <span>Weight Plate</span>
+                           <span>Weight: 5kg</span>
+                           <span>₹19.00</span>
+                           <span class="remove-mob"  style="color: #6C7275;" onclick="removeItem(this)"> <i class="fa fa-times" aria-hidden="true"></i>Remove</span>
+                        </div>
+                        <div class="quantity-mob">
+                           <label for="quantity-mob-2">Qty:</label>
+                           <select id="quantity-mob-2" name="quantity" onchange="updatePrice(this)">
+                              <option value="1" selected>1</option>
+                              <option value="2">2</option>
+                              <option value="3">3</option>
+                              <option value="4">4</option>
+                              <option value="5">5</option>
+                           </select>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- Product 3 -->
+                  <div class="product-card-mob">
+                     <div class="product-image-mob">
+                        <img src="Images/small-icon-3.png" alt="Weight Plate">
+                     </div>
+                     <div class="product-details-mob">
+                        <div class="product-name-mob">
+                           <span>Weight Plate</span>
+                           <span>Weight: 5kg</span>
+                           <span>₹19.00</span>
+                           <span class="remove-mob"  style="color: #6C7275;" onclick="removeItem(this)"> <i class="fa fa-times" aria-hidden="true"></i>Remove</span>
+                        </div>
+                        <div class="quantity-mob">
+                           <label for="quantity-mob-3">Qty:</label>
+                           <select id="quantity-mob-3" name="quantity" onchange="updatePrice(this)">
+                              <option value="1" selected>1</option>
+                              <option value="2">2</option>
+                              <option value="3">3</option>
+                              <option value="4">4</option>
+                              <option value="5">5</option>
+                           </select>
+                        </div>
+                     </div>
+                  </div>
                </div>
                <div class="cart-summery-1">
                   <div class="cart-summary">
@@ -676,6 +825,31 @@
          
          // Initialize the cart summary when the page loads
          updateCartSummary();
+      </script>
+      <script>
+         // Function to update the price based on the quantity
+         function updatePrice(selectElement) {
+             // Find the product card this select belongs to
+             const productCard = selectElement.closest('.product-card-mob');
+             
+             // Get the unit price from the data attribute or span
+             const unitPrice = parseFloat(productCard.querySelector('.product-name-mob span:nth-child(3)').textContent.replace('₹', ''));
+             
+             // Get the selected quantity
+             const quantity = parseInt(selectElement.value);
+             
+             // Calculate the new total price
+             const totalPrice = unitPrice * quantity;
+         
+             // Update the display of the price
+             const priceDisplay = productCard.querySelector('.product-name-mob span:nth-child(3)');
+             priceDisplay.textContent = `₹${totalPrice.toFixed(2)}`;
+         }
+         
+         // Function to remove an item
+         function removeItem(element) {
+             element.closest('.product-card-mob').remove();
+         }
       </script>
    </body>
 </html>
