@@ -327,6 +327,7 @@ section.counter-section {
 /* who we are  */
 section.who-section {
 	background: #f7f4eb;
+	padding: 50px 30px 30px 30px;
 }
 
 .main-div-who {
@@ -651,8 +652,8 @@ section.Testing-lab {
 	transform: translateY(30px);
 	width: 275px;
 	color: #fff;
-	padding: 0 20px;
-	font-weight: 500;
+	padding: 6px 20px;
+	font-weight: 400;
     font-size: 25px;
 
 }
@@ -1043,7 +1044,7 @@ footer p {
 .footer-location p,
 .footer-phone p,
 .footer-email p {
-	font-size: 16px;
+	font-size: 15px;
 	margin: 0;
 }
 
@@ -1828,8 +1829,11 @@ section.Product-collection-mob {
     text-align: center;
     padding: 10px;
     background: #AB9235;
-    width: 300px;
-    margin-left: 30px;
+    width: Auto;
+
+}
+.product-cat h3 {
+    margin-top: 20px;
 }
 .enqu a {
     color: #fff;
@@ -2427,6 +2431,9 @@ section.Our-Company {
 	section.Product-collection-mob {
 		display: block;
 	}
+	.form-container h2 {
+		font-size: 22px;
+	}
 	.form-section button.submit-button {
         width: 40%;
     }
@@ -2645,6 +2652,9 @@ section.Our-Company {
 	counter-container-2 {
         flex-direction: row;
     }
+	.cart-container .product-row {
+		display: block !important;
+		}
 	section.Contact-type {
 		margin-top: -0px;
 	}
@@ -2797,6 +2807,12 @@ section.Our-Company {
 	       .slide-track {
                 animation: scroll 10s linear infinite;
             }
+			.add-cart {
+				display: block;
+			}
+			.quantity-container {
+				width: 50%;
+			}
 			.our-strength-sub-mob h3 {
 				padding: 10px 0;
 			}
@@ -2924,7 +2940,7 @@ section.Our-Company {
 	}
 
 	.banner-div {
-		transform: translateY(0%);
+		transform: translateY(40%);
 	}
 
 	.banner-div p {
@@ -2993,6 +3009,16 @@ section.Our-Company {
     }
 	section.Essentials-section {
 		padding: 30px;
+	}
+	.copyright-section {
+		padding: 5px;
+	}
+	.copyright-section p {
+		font-size: 15px;
+	}
+	p.fist-p {
+	
+		text-align: justify;
 	}
 	section.subscribe {
         padding: 5px 0px;
