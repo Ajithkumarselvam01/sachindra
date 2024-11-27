@@ -457,21 +457,12 @@ section.who-section {
 .shop-button .shop-more:hover {
 	background-color: #333;
 }
-
 .gym-tab {
 	width: 100%;
 	display: flex;
 	text-align: center;
-	gap: 20px;
+	gap: 0px;
 }
-
-.sub-gym img {
-	box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-	border-radius: 20px 20px 0px 0px;
-	background:#fff;
-	max-height: 300px;
-}
-
 .sub-gym h4 {
 	padding: 10px;
 	background: #ab9235;
@@ -2675,8 +2666,6 @@ section.Our-Company {
 	.sub-gym-mob {
 		text-align: center;
 		margin-bottom: 20px;
-		background: #fff;
-		border-radius: 20px 20px 20px 20px;
 	}
 
 	.sub-gym-mob h4 {
